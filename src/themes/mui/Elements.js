@@ -58,6 +58,7 @@ import EditIcon from '@material-ui/icons/Edit';
 import FlagIcon from '@material-ui/icons/Flag';
 import ShareIcon from '@material-ui/icons/Share';
 import ArrowBack from '@material-ui/icons/ArrowBack';
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
 
 export {
   Accordion,
@@ -118,4 +119,5 @@ export {
   FlagIcon,
   ShareIcon,
   ArrowBack,
+  VpnKeyIcon,
 };

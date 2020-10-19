@@ -1,8 +1,9 @@
 import React, {useContext, useEffect, useRef} from "react";
-import MaterialTable from "material-table";
+import {MaterialTable, VpnKeyIcon} from 'project-elements';
 import {makeStyles} from "@material-ui/core/styles";
 import {MainContext} from "../../contexts/MainContext";
-import UserForm from "./UserForm/UserForm";
+import UserForm from "./UserForm";
+import PasswordChangeForm from "./PasswordChangeForm";
 
 const useStyles = makeStyles({
   table: {
@@ -15,8 +16,12 @@ const UsersList = props => {
   const tableRef = useRef();
 
   const onPressAddHandler = () => {
-    openDialog({title: 'User', contentComponent: <UserForm refresh={+new Date()}/>}, dispatch);
+    openDialog({title: 'New User', contentComponent: <UserForm refresh={+new Date()}/>}, dispatch);
   };
+
+  const onPressChangePasswordHandler = (event, user) => {
+    openDialog({title: 'Change password', contentComponent: <PasswordChangeForm user={user} refresh={+new Date()}/>}, dispatch);
+  }
 
   const onPressDeleteHandler = async (event, {_id}) => {
     try {
@@ -37,6 +42,9 @@ const UsersList = props => {
   return (
     <div className={classes.table}>
       <MaterialTable
+        options={{
+          actionsColumnIndex: -1,
+        }}
         title="Manage Users"
         columns={[
           {title: 'First Name', field: 'firstname'},
@@ -50,6 +58,11 @@ const UsersList = props => {
             icon: 'add',
             isFreeAction: true,
             onClick: onPressAddHandler
+          },
+          {
+            tooltip: 'Change password',
+            icon: VpnKeyIcon,
+            onClick: onPressChangePasswordHandler
           },
           {
             tooltip: 'Delete',
