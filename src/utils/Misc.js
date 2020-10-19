@@ -1,5 +1,6 @@
 const nl2br = (str) => str.replace(/\n/gi, '<br>');
 const br2nl = (str) => str.replace(/<br[^>]*>/gi, '\n');
+const capitalize = str => str[0].toUpperCase() + str.substr(1);
 
 const makeAttachFormData = argFormData => {
   const formData = {...argFormData}
@@ -28,5 +29,6 @@ const makeAttachFormData = argFormData => {
 export {
   nl2br,
   br2nl,
+  capitalize,
   makeAttachFormData
 }

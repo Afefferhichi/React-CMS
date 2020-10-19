@@ -24,7 +24,6 @@ const CommentItem = props => {
   const {comment, post_id} = props;
   const {
     _id,
-    avatar = 'U',
     cmtValue = 'Comment',
     cmtHelpfuls,
     cmtUnHelpfuls,

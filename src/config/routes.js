@@ -8,7 +8,7 @@ import Search from "../modules/Admin/Search";
 import ShowPost from "../modules/Posts/ShowPost";
 
 // For admin users
-import ManageUsers from "../modules/Admin/Users/ManageUsers";
+import AdminUsersList from "../modules/Admin/Users/AdminUsersList";
 import ManagePosts from "../modules/Admin/Posts/ManagePosts";
 import AdminTemplatesList from "../modules/Admin/Templates/AdminTemplatesList";
 import AdminTemplatesNew from "../modules/Admin/Templates/AdminTemplatesNew";
@@ -25,7 +25,8 @@ const routes = [
   {path: '/templates/:id', component: TemplatesList},
   {path: '/posts/:id', component: ShowPost},
   // For admin users
-  {path: '/admin/users', component: ManageUsers},
+  // {path: '/admin/users', component: ManageUsers},
+  {path: '/admin/users', component: AdminUsersList},
   {path: '/admin/posts', component: ManagePosts},
   {path: '/admin/templates/new', component: AdminTemplatesNew},
   {path: '/admin/templates/:id/edit', component: AdminTemplatesEdit},

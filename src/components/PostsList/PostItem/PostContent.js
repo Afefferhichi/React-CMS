@@ -27,7 +27,6 @@ const PostContent = props => {
   const {post} = props;
   const {
     _id,
-    avatar = 'U',
     pstTitle,
     pstContent,
     pstLikes,

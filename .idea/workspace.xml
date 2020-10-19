@@ -20,11 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/UsersList/UserForm/UserForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/UsersList/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/Admin/Users/AdminUsersList/AdminUsersList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/Admin/Users/AdminUsersList/AdminUsersList.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/Admin/Users/AdminUsersList/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CallServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CallServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/tests/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/tests/config/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/tests/libs/test_utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/tests/libs/test_utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Users/ManageUsers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Misc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Misc.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +92,7 @@
       <workItem from="1603082023049" duration="15778000" />
       <workItem from="1603129193065" duration="38000" />
       <workItem from="1603129234568" duration="3214000" />
-      <workItem from="1603132477118" duration="3806000" />
+      <workItem from="1603132477118" duration="8238000" />
     </task>
     <servers />
   </component>
