@@ -1,0 +1,13 @@
+
+.form-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: .5em;
+}
+.form-row > .form-group > label {
+  padding: .5em 1em 0 0;
+  flex: 1;
+}
+.form-row > .form-group > input {
+  flex: 2;
+}

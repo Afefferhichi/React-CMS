@@ -1,0 +1,54 @@
+{
+  "name": "3almadmoun",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "postinstall": "link-module-alias",
+    "test2": "cls && node -r esm src/utils/tests/index.js"
+  },
+  "_moduleAliases": {
+    "project-elements": "./src/themes/mui/Elements.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "formik": "^2.1.5",
+    "link-module-alias": "^1.2.0",
+    "material-table": "^1.68.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-dropzone": "^11.2.0",
+    "react-email-editor": "^1.2.0",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.1.21",
+    "react-image-file-resizer": "^0.3.8",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1",
+    "reactstrap": "^8.5.1",
+    "yup": "^0.29.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "abort-controller": "^3.0.0",
+    "esm": "^3.2.25",
+    "form-data": "^3.0.0",
+    "https": "^1.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}
