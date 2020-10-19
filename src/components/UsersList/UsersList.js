@@ -4,6 +4,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import {MainContext} from "../../contexts/MainContext";
 import UserForm from "./UserForm";
 import PasswordChangeForm from "./PasswordChangeForm";
+import CallServer from "../../utils/CallServer";
 
 const useStyles = makeStyles({
   table: {
@@ -19,8 +20,17 @@ const UsersList = props => {
     openDialog({title: 'New User', contentComponent: <UserForm refresh={+new Date()}/>}, dispatch);
   };
 
+  const setEnabledHandler = async (event, user) => {
+    const enableMethod = user.enabled ? 'disable' : 'enable';
+    await CallServer.put('admin/setUserEnabled/' + user._id + '/' + enableMethod);
+    getUsers(dispatch);
+  }
+
   const onPressChangePasswordHandler = (event, user) => {
-    openDialog({title: 'Change password', contentComponent: <PasswordChangeForm user={user} refresh={+new Date()}/>}, dispatch);
+    openDialog({
+      title: 'Change password',
+      contentComponent: <PasswordChangeForm user={user} refresh={+new Date()}/>
+    }, dispatch);
   }
 
   const onPressDeleteHandler = async (event, {_id}) => {
@@ -48,7 +58,8 @@ const UsersList = props => {
         title="Manage Users"
         columns={[
           {title: 'First Name', field: 'firstname'},
-          {title: 'Email', field: 'email'}
+          {title: 'Email', field: 'email'},
+          {title: 'Enabled', field: 'enabled', type: 'boolean'},
         ]}
         tableRef={tableRef}
         data={users}
@@ -59,6 +70,18 @@ const UsersList = props => {
             isFreeAction: true,
             onClick: onPressAddHandler
           },
+          rowData => ({
+            tooltip: 'Enable',
+            icon: 'visibility',
+            disabled: rowData.enabled,
+            onClick: setEnabledHandler
+          }),
+          rowData => ({
+            tooltip: 'Disable',
+            icon: 'visibility_off',
+            disabled: !rowData.enabled,
+            onClick: setEnabledHandler
+          }),
           {
             tooltip: 'Change password',
             icon: VpnKeyIcon,
