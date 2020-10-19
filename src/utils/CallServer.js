@@ -5,11 +5,13 @@ const timeout = 5000;
 const LocalStorageIsNotDefined = (typeof localStorage === 'undefined');
 
 let fetch2;
-if (typeof fetch === 'undefined')
-{
+let fs;
+let https;
+if (typeof fetch === 'undefined') {
   fetch2 = require('node-fetch');
-}
-else
+  https = require('https');
+  fs = require('fs');
+} else
   fetch2 = fetch;
 
 let AbortController2;
@@ -46,6 +48,23 @@ class CallServerClass {
   }
 
   request(api, method = 'GET', post_data) {
+    let options, sslConfiguredAgent;
+    if(fs) {
+      options = {
+        cert: fs.readFileSync(
+          ('./cert.pem'),
+          `utf-8`,
+        ),
+        key: fs.readFileSync(
+          ('./key.pem'),
+          'utf-8',
+        ),
+        rejectUnauthorized: false,
+        keepAlive: false,
+      };
+      sslConfiguredAgent = new https.Agent(options);
+    }
+
     return new Promise((resolve, eject) => {
       const fetchUrl = constants.API_SERVER;
       const controller = new AbortController2();
@@ -59,6 +78,7 @@ class CallServerClass {
               ? 'PUT' : method)
         }),
         cache: 'no-store',
+        ...(fs ? {agent: sslConfiguredAgent,} : {}),
         headers: {
           ...(method === 'POST' || method === 'PUT' ? {'Content-Type': 'application/json'} : {}),
           charset: 'utf-8',
@@ -69,7 +89,7 @@ class CallServerClass {
         signal: controller.signal,
       })
         .then(async response => {
-          try{
+          try {
             responseText = await response.text();
             clearTimeout(this.timeout);
             return JSON.parse(responseText);

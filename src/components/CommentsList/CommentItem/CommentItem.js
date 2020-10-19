@@ -54,7 +54,7 @@ const CommentItem = props => {
     }, dispatch);
   };
   const updateCommentHandler = async (comment) => {
-    await updateComment({post_id, comment_id: _id, comment}, dispatch).then(() => {
+    updateComment({post_id, comment_id: _id, comment}, dispatch).then(() => {
       closeDialog(dispatch);
     })
   };
