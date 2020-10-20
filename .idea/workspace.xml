@@ -20,13 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/tests/users/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/tests/users/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CallServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CallServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/tests/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/tests/config/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/tests/posts/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/tests/posts/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TemplateBox/TemplateBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TemplateBox/TemplateBox.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +86,7 @@
       <workItem from="1603132477118" duration="12829000" />
       <workItem from="1603169916637" duration="10580000" />
       <workItem from="1603183154684" duration="8224000" />
-      <workItem from="1603205325981" duration="13735000" />
+      <workItem from="1603205325981" duration="14401000" />
     </task>
     <servers />
   </component>

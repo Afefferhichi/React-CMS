@@ -38,7 +38,7 @@ const TemplateBox = props => {
         <Typography variant="h6">{name}</Typography>
         <Typography>Category: {category}</Typography>
         <Divider/>
-        <Paper outline={1} style={{padding: 10}} dangerouslySetInnerHTML={{__html: nl2br(description)}}/>
+        <Paper outline={1} style={{padding: 10}} dangerouslySetInnerHTML={{__html: nl2br(description || '')}}/>
       </CardContent>
       <CardActions>
         <IconButton onClick={pressCheckHandler}>
