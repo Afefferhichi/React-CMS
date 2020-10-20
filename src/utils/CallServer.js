@@ -92,6 +92,7 @@ class CallServerClass {
           try {
             responseText = await response.text();
             clearTimeout(this.timeout);
+            console.log('responseText', responseText);
             return JSON.parse(responseText);
           } catch (error) {
             console.log(error, response);

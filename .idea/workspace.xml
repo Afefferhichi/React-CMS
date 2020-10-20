@@ -20,31 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/tests/users/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/tests/users/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentsAddNew/CommentsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentsAddNew/CommentsAddNew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/DeleteButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/DeleteButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/EditButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/EditButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/LikeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/LikeButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SettingsItems/UpdateAvatar/UpdateAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsItems/UpdateAvatar/UpdateAvatar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SettingsItems/UpdateEmail/UpdateEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsItems/UpdateEmail/UpdateEmail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SettingsItems/UpdatePassword/UpdatePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsItems/UpdatePassword/UpdatePassword.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SnackBar/SnackBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SnackBar/SnackBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/PasswordChangeForm/PasswordChangeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/PasswordChangeForm/PasswordChangeForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UserForm/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UserForm/UserForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/MainContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/MainContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/actions/CommentActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/CommentActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/actions/SnackbarActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/SnackbarActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/SnackbarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/SnackbarReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Auth/_Components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Auth/_Components/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Posts/ShowPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Posts/ShowPost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/mui/Elements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/Elements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/CallServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CallServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/tests/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/tests/config/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/tests/posts/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/tests/posts/create.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,26 +48,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.68" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/tests/comments" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/utils/tests/users" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Users\CTO\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\202.7660.23\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\users" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\comments" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\admin" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\components\UsersList" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\contribute\3almadmoun\front-end\src\components" />
       <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\admin" />
       <recent name="D:\contribute\3almadmoun\front-end\src\components\SettingsItems" />
       <recent name="D:\contribute\3almadmoun\front-end\src\components\UpdateEmail" />
       <recent name="D:\contribute\3almadmoun\front-end\src\modules\Admin\Templates\TemplatesList" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\comments" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\admin" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\components\UsersList" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\users" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\templates" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -110,7 +92,7 @@
       <workItem from="1603132477118" duration="12829000" />
       <workItem from="1603169916637" duration="10580000" />
       <workItem from="1603183154684" duration="8224000" />
-      <workItem from="1603205325981" duration="10358000" />
+      <workItem from="1603205325981" duration="13735000" />
     </task>
     <servers />
   </component>
