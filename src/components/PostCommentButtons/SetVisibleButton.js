@@ -7,17 +7,24 @@ const SetVisibleButton = props => {
   const [onProcessing, setOnProcessing] = useState('');
   const {visibleItem, itemType} = props;
   const visibleItemPressHandler = async () => {
-    setOnProcessing('visible');
-
-    const visibleMethod = visibleItem.visible ? 'invisible' : 'visible';
-    if (itemType === 'post') {
-      await setVisiblePost(visibleItem._id, visibleMethod, dispatch);
+    try{
+      setOnProcessing('visible');
+      const visibleMethod = visibleItem.visible ? 'invisible' : 'visible';
+      if (itemType === 'post') {
+        await setVisiblePost(visibleItem._id, visibleMethod, dispatch);
+      }
+      if (itemType === 'comment') {
+        await setVisibleComment(visibleItem._id, visibleMethod, dispatch);
+      }
+      setOnProcessing('');
+    } catch (errorResponse) {
+      setOnProcessing('');
+      if(errorResponse.error) {
+        alert(errorResponse.error.message)
+      } else {
+        alert('Unexpected error occurred')
+      }
     }
-    if (itemType === 'comment') {
-      await setVisibleComment(visibleItem._id, visibleMethod, dispatch);
-    }
-
-    setOnProcessing('');
   };
   return (
     <IconButton disabled={onProcessing === 'visible'} onClick={visibleItemPressHandler}>

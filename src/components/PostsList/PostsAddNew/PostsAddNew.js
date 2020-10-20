@@ -6,7 +6,7 @@ import {Button} from "@material-ui/core";
 
 const PostAddNew = props => {
   const classes = usePostAddNewStyle();
-  const {openDialog, closeDialog, addPost, dispatch} = useContext(MainContext);
+  const {openDialog, closeDialog, addPost, openSnackBar, dispatch} = useContext(MainContext);
   const handleClickOpen = () => {
     openDialog({title: 'Post', contentComponent: <PostForm refresh={+new Date()} onSave={addPostHandler}/>}, dispatch);
   };
@@ -14,6 +14,7 @@ const PostAddNew = props => {
     // console.log('postData', postData);
     await addPost(postData, dispatch);
     await closeDialog(dispatch);
+    openSnackBar({message: 'Successfully created', severity: 'success'}, dispatch);
   };
   return (
     <>

@@ -5,23 +5,32 @@ import {MainContext} from "../../contexts/MainContext";
 import CommentForm from "../CommentsList/CommentForm";
 
 const EditButton = props => {
-  const {closeDialog, openDialog, updatePost, updateComment, dispatch} = useContext(MainContext);
+  const {closeDialog, openDialog, updatePost, updateComment, openSnackBar, dispatch} = useContext(MainContext);
   const {editItem, itemType} = props;
 
   const EditForm = itemType === 'post' ? PostForm : CommentForm;
   const FormTitle = itemType === 'post' ? 'Edit post' : 'Edit comment';
 
 
-  const updateItemHandler = (itemData) => {
-    if(itemType === 'post') {
-      updatePost(editItem._id, itemData, dispatch).then(() => {
-        closeDialog(dispatch);
-      });
-    }
-    if(itemType === 'comment') {
-      updateComment({post_id: editItem.postId, comment_id: editItem._id, comment: itemData}, dispatch).then(() => {
-        closeDialog(dispatch);
-      });
+  const updateItemHandler = async (itemData) => {
+    try {
+      if (itemType === 'post') {
+        await updatePost(editItem._id, itemData, dispatch);
+      }
+      if (itemType === 'comment') {
+        await updateComment({post_id: editItem.postId, comment_id: editItem._id, comment: itemData}, dispatch);
+      }
+      openSnackBar({message: 'Successfully updated!', severity: 'success'}, dispatch);
+      closeDialog(dispatch);
+    } catch (errorResponse) {
+      let message;
+      if (errorResponse.error) {
+        message = (errorResponse.error.message)
+      } else {
+        message = ('Unexpected error occurred')
+      }
+      openSnackBar({message, severity: 'error'}, dispatch);
+      closeDialog(dispatch);
     }
   };
 

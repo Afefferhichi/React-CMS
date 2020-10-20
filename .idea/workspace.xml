@@ -20,21 +20,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/tests/comments/setVisible.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/tests/posts/setVisible.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentsAddNew/CommentsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentsAddNew/CommentsAddNew.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/DeleteButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/DeleteButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/EditButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/EditButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/LikeButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/LikeButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SettingsItems/UpdateAvatar/UpdateAvatar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsItems/UpdateAvatar/UpdateAvatar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SettingsItems/UpdateEmail/UpdateEmail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsItems/UpdateEmail/UpdateEmail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SettingsItems/UpdatePassword/UpdatePassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SettingsItems/UpdatePassword/UpdatePassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SnackBar/SnackBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SnackBar/SnackBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UsersList/PasswordChangeForm/PasswordChangeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/PasswordChangeForm/PasswordChangeForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UserForm/UserForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UserForm/UserForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/MainContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/MainContext.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contexts/actions/CommentActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/CommentActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/actions/PostActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/PostActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/CommentReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/CommentReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/PostReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/PostReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/tests/libs/test_utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/tests/libs/test_utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/actions/SnackbarActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/SnackbarActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/SnackbarReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/SnackbarReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Auth/_Components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Auth/_Components/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Posts/ShowPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Posts/ShowPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/mui/Elements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/Elements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +109,8 @@
       <workItem from="1603129234568" duration="3214000" />
       <workItem from="1603132477118" duration="12829000" />
       <workItem from="1603169916637" duration="10580000" />
-      <workItem from="1603183154684" duration="7825000" />
+      <workItem from="1603183154684" duration="8224000" />
+      <workItem from="1603205325981" duration="10358000" />
     </task>
     <servers />
   </component>

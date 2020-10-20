@@ -12,7 +12,7 @@ const useStyles = makeStyles({
   }
 });
 const UsersList = props => {
-  const {users, getUsers, deleteUser, openDialog, dispatch} = useContext(MainContext);
+  const {users, getUsers, deleteUser, openDialog, openSnackBar, dispatch} = useContext(MainContext);
   const classes = useStyles();
   const tableRef = useRef();
 
@@ -23,6 +23,7 @@ const UsersList = props => {
   const setEnabledHandler = async (event, user) => {
     const enableMethod = user.enabled ? 'disable' : 'enable';
     await CallServer.put('admin/setUserEnabled/' + user._id + '/' + enableMethod);
+    openSnackBar({message: 'Successfully ' + enableMethod + 'd', severity: 'success'}, dispatch);
     getUsers(dispatch);
   }
 
@@ -37,6 +38,7 @@ const UsersList = props => {
     try {
       if (!window.confirm('Are you sure to delete this user?')) return;
       await deleteUser(_id, dispatch);
+      openSnackBar({message: 'Successfully deleted', severity: 'success'}, dispatch);
     } catch (err) {
       alert('Error deleting user! Try again later');
     }

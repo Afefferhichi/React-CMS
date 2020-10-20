@@ -10,7 +10,7 @@ import constants from "../../../config/constants";
 const formData = {}
 const UpdateAvatar = props => {
   const [isSelectingImage, setIsSelectingImage] = useState(0);
-  const {client, getClientInfo, dispatch} = useContext(MainContext);
+  const {client, getClientInfo, openSnackBar, dispatch} = useContext(MainContext);
   const classes = useFormStyles();
   const updateAvatarForm = useFormik({
     initialValues: {
@@ -27,7 +27,8 @@ const UpdateAvatar = props => {
           const {updatedUser} = request;
           if (updatedUser._id) {
             await getClientInfo(dispatch);
-            window.location.reload();
+            openSnackBar({message: 'Successfully updated avatar!', severity: 'success'}, dispatch);
+            // window.location.reload();
           }
           formData.file = null;
         }
@@ -72,7 +73,8 @@ const UpdateAvatar = props => {
     const {updatedUser} = request;
     if (updatedUser._id) {
       await getClientInfo(dispatch);
-      window.location.reload();
+      openSnackBar({message: 'Successfully removed avatar!', severity: 'success'}, dispatch);
+      // window.location.reload();
       // setIsSelectingImage(0);
     }
   }

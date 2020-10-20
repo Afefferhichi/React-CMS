@@ -1,32 +1,35 @@
 import React, {createRef, useContext} from "react";
-import {IconButton, Snackbar} from "@material-ui/core";
-import {CloseIcon} from "../../themes/mui/Elements";
+import {MuiAlert, Snackbar} from "project-elements";
 import {MainContext} from "../../contexts/MainContext";
 
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
+
 const SnackBar = props => {
-  const {snackbar, closeSnackBar, dispatch} = useContext(MainContext);
+  const {snackbar = {}, closeSnackBar, dispatch} = useContext(MainContext);
   const snackbarRef = createRef();
 
+  const {message = '', severity = 'success', opened = false} = snackbar;
+
   return (
-    (snackbar && snackbar.opened === true)
-      ? (
-        <Snackbar
-          ref={snackbarRef}
-          anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
-          }}
-          open={snackbar.opened}
-          autoHideDuration={5000}
-          onClose={()=>closeSnackBar(dispatch)}
-          message={snackbar.message || 'Snack bar opening...'}
-          action={
-            <IconButton size="small" aria-label="close" color="inherit" onClick={()=>closeSnackBar(dispatch)}>
-              <CloseIcon fontSize="small"/>
-            </IconButton>
-          }
-        />)
-      : null
+    <Snackbar
+      ref={snackbarRef}
+      anchorOrigin={{
+        vertical: 'bottom',
+        horizontal: 'center',
+      }}
+      open={opened}
+      autoHideDuration={5000}
+      onClose={() => closeSnackBar(dispatch)}
+    >
+      <Alert
+        style={{minWidth: 300}}
+        severity={severity}
+        onClose={() => closeSnackBar(dispatch)}>
+        {message}
+      </Alert>
+    </Snackbar>
   );
 };
 export default SnackBar;

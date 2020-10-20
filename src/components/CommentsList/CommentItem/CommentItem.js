@@ -47,20 +47,18 @@ const CommentItem = props => {
       </Grid>
       <Grid item xs={4} style={{paddingRight: 20}}>
         <Grid container justify={'flex-end'}>
-          {isReader && (
-            <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 75, float: 'left'}}
-                  className={classes.linkButtonContainer}>
-              <LikeButton itemType={'comment'} mode={'helpful'} likeItem={comment} likes={cmtHelpfuls}/>
-            </Grid>
-          )}
-          {isReader && (
-            <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 75, float: 'left'}}
-                  className={classes.linkButtonContainer}>
-              <LikeButton itemType={'comment'} mode={'unhelpful'} likeItem={comment} dislikes={cmtUnHelpfuls}/>
-            </Grid>
-          )}
+          <Grid item container alignItems={'center'} justify={'center'}
+                style={{width: 75, float: 'left'}}
+                className={classes.linkButtonContainer}>
+            <LikeButton itemType={'comment'} mode={'helpful'} likeItem={comment} readOnly={!isReader}
+                        likes={cmtHelpfuls}/>
+          </Grid>
+          <Grid item container alignItems={'center'} justify={'center'}
+                style={{width: 75, float: 'left'}}
+                className={classes.linkButtonContainer}>
+            <LikeButton itemType={'comment'} mode={'unhelpful'} likeItem={comment} readOnly={!isReader}
+                        dislikes={cmtUnHelpfuls}/>
+          </Grid>
           {isAuthor && (
             <Grid item container alignItems={'center'} justify={'center'}
                   style={{width: 50, float: 'left'}} >

@@ -9,10 +9,10 @@ import useFormStyles from "../Styles/form.style";
 
 const UpdateEmail = props => {
   const classes = useFormStyles();
-  const {client, logout, dispatch} = useContext(MainContext);
+  const {client, logout, openSnackBar, dispatch} = useContext(MainContext);
   const updateEmailForm = useFormik({
     initialValues: {
-      currentEmail: '',
+      currentEmail: client.email,
       newEmail: ''
     },
     validationSchema: Yup.object().shape({
@@ -26,12 +26,17 @@ const UpdateEmail = props => {
           newEmail, currentEmail
         };
         const request = await CallServer.put('users/' + client._id, updateData);
-        const {updatedUser} = request;
-        if (updatedUser._id) {
-          logout(dispatch);
+        if(request.success) {
+          const {updatedUser} = request;
+          if (updatedUser._id) {
+            openSnackBar({message: 'Successfully updated email!', severity: 'success'}, dispatch);
+            logout(dispatch);
+          }
+        } else {
+          openSnackBar({message: request.error && request.error.message, severity: 'error'}, dispatch);
         }
       } catch (err) {
-        setFieldError('updateEmail', err.message);
+        // setFieldError('updateEmail', err.message);
       }
     }
   });
@@ -47,6 +52,7 @@ const UpdateEmail = props => {
         label="Current Email"
         name="currentEmail"
         autoComplete="off"
+        disabled
         value={updateEmailForm.values.currentEmail}
         error={updateEmailForm.errors.currentEmail && updateEmailForm.touched.currentEmail}
         helperText={updateEmailForm.errors.currentEmail && updateEmailForm.errors.currentEmail}

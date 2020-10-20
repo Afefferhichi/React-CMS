@@ -10,7 +10,7 @@ import CallServer from "../../../utils/CallServer";
 
 const UpdatePassword = props => {
   const classes = useFormStyles();
-  const {client, logout, dispatch} = useContext(MainContext);
+  const {client, logout, openSnackBar, dispatch} = useContext(MainContext);
   const updatePasswordForm = useFormik({
     initialValues: {
       currentPassword: '',
@@ -29,13 +29,19 @@ const UpdatePassword = props => {
           newPassword, currentPassword
         };
         const request = await CallServer.put('users/' + client._id, updateData);
-        const {token} = request;
-        if (token) {
-          window.localStorage.setItem('token', token);
-          await logout(dispatch);
+        if(request.success) {
+          const {token} = request;
+          if (token) {
+            window.localStorage.setItem('token', token);
+            await logout(dispatch);
+            openSnackBar({message: 'Successfully changed password', severity: 'success'}, dispatch);
+          }
+        } else {
+          openSnackBar({message: request.error.message, severity: 'error'}, dispatch);
         }
       } catch (err) {
-        setFieldError('updateEmail', err.message);
+        openSnackBar({message: err.message, severity: 'error'}, dispatch);
+        // setFieldError('updateEmail', err.message);
       }
     }
   });

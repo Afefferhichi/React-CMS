@@ -5,7 +5,7 @@ const SnackbarReducer = (state, {type, payload}) => {
     case OPEN_CLOSE_SNACKBAR:
       return {
         ...state,
-        snackbar: payload
+        snackbar: {...state.snackbar, ...payload}
       }
     default:
       return state;

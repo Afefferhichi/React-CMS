@@ -30,6 +30,7 @@ import {
   Toolbar,
   Typography
 } from "@material-ui/core";
+import MuiAlert from '@material-ui/lab/Alert';
 
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MaterialTable from 'material-table';
@@ -86,6 +87,7 @@ export {
   makeStyles,
   Menu,
   MenuItem,
+  MuiAlert,
   Paper,
   Snackbar,
   TextField,

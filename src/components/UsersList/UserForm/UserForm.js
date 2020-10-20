@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import {capitalize} from "../../../utils/Misc";
 
 const UserForm = props => {
-  const {addUser, getUsers, closeDialog, dispatch} = useContext(MainContext);
+  const {addUser, getUsers, closeDialog, openSnackBar, dispatch} = useContext(MainContext);
 
   const onPressCloseHandler = () => {
     closeDialog(dispatch);
@@ -38,6 +38,7 @@ const UserForm = props => {
         await addUser(formData, dispatch);
         getUsers(dispatch);
         onPressCloseHandler();
+        openSnackBar({message: 'Successfully created', severity: 'success'}, dispatch);
       } catch (err) {
         alert(err.message);
       }

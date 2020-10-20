@@ -32,90 +32,91 @@ const PostContent = props => {
   } = post;
   const hasPostIdInUrl = window.location.href.indexOf(_id) > -1;
 
+  const goBackPressHandler = () => {
+    window.history.back();
+  }
+
   return (
     <>
-      <Grid item xs={8}>
-        <Grid container className={classes.grid} spacing={0} alignItems='center'>
-          {hasPostIdInUrl && (
-            <Grid item xs={1} container justify={'center'} alignItems={'center'}>
-              <Link to={'/home'}>
-                <ArrowBack/>
-              </Link>
+      <Grid container>
+        <Grid item xs={8}>
+          <Grid container className={classes.grid} spacing={0} alignItems='center'>
+            {hasPostIdInUrl && (
+              <Grid item xs={1} container justify={'center'} alignItems={'center'}>
+                <Link onClick={goBackPressHandler}>
+                  <ArrowBack/>
+                </Link>
+              </Grid>
+            )}
+            <Grid item xs={1}>
+              <Avatar title={`${author.firstname} ${author.lastname} ${author.email}`}>
+                {!author
+                  ? 'U'
+                  : (
+                    <img
+                      width={50}
+                      alt={''}
+                      src={constants.API_SERVER + 'attachments/' + author.photo}/>
+                  )
+                }
+              </Avatar>
             </Grid>
-          )}
-          <Grid item xs={1}>
-            <Avatar title={`${author.firstname} ${author.lastname} ${author.email}`}>
-              {!author
-                ? 'U'
-                : (
-                  <img
-                    width={50}
-                    alt={''}
-                    src={constants.API_SERVER + 'attachments/' + author.photo}/>
+            <Grid item xs={hasPostIdInUrl ? 9 : 10}>
+              {!hasPostIdInUrl
+                ? (
+                  <Link to={'/posts/' + _id}>
+                    <Typography variant='h6'>
+                      {pstTitle}
+                    </Typography>
+                  </Link>
                 )
-              }
-            </Avatar>
-          </Grid>
-          <Grid item xs={hasPostIdInUrl ? 10 : 11}>
-            {!hasPostIdInUrl
-              ? (
-                <Link to={'/posts/' + _id}>
+                : (
                   <Typography variant='h6'>
                     {pstTitle}
                   </Typography>
-                </Link>
-              )
-              : (
-                <Typography variant='h6'>
-                  {pstTitle}
-                </Typography>
+                )}
+              {(
+                visible ? '' : <span style={{color: 'gray'}}>(hidden by admin)</span>
               )}
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={4}>
+          <Grid container className={classes.grid} spacing={2} justify={'flex-end'}>
+            <Grid item>
+              <ShareButton url={url}/>
+            </Grid>
+            <Grid item container alignItems={'center'} justify={'center'}
+                  style={{width: 75, float: 'left'}}
+                  className={classes.linkButtonContainer}>
+              <LikeButton itemType={'post'} mode={'like'} likeItem={post} likes={pstLikes} readOnly={!isReader}/>
+            </Grid>
+            <Grid item container alignItems={'center'} justify={'center'}
+                  style={{width: 75, float: 'left'}}>
+              <LikeButton itemType={'post'} mode={'dislike'} likeItem={post} dislikes={pstDislikes} readOnly={!isReader}/>
+            </Grid>
+            {isAuthor && (
+              <Grid item container alignItems={'center'} justify={'center'}
+                    style={{width: 50, float: 'left'}}>
+                <EditButton editItem={post} itemType={'post'}/>
+              </Grid>
+            )}
+            {isAuthor && (
+              <Grid item container alignItems={'center'} justify={'center'}
+                    style={{width: 50, float: 'left'}}>
+                <DeleteButton deleteItem={post} itemType={'post'}/>
+              </Grid>
+            )}
             {isAdmin && (
-              visible ? '' : <span style={{color: 'gray'}}>(hidden)</span>
+              <Grid item container alignItems={'center'} justify={'center'}
+                    style={{width: 50, float: 'left'}}>
+                <SetVisibleButton visibleItem={post} itemType={'post'}/>
+              </Grid>
             )}
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={4}>
-        <Grid container className={classes.grid} spacing={2} justify={'flex-end'}>
-          <Grid item>
-            {isReader && <ShareButton url={url}/>}
-          </Grid>
-          {isReader && (
-            <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 75, float: 'left'}}
-                  className={classes.linkButtonContainer}>
-              <LikeButton itemType={'post'} mode={'like'} likeItem={post} likes={pstLikes}/>
-            </Grid>
-          )}
-          {isReader && (
-            <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 75, float: 'left'}}>
-              <LikeButton itemType={'post'} mode={'dislike'} likeItem={post} dislikes={pstDislikes}/>
-            </Grid>
-          )}
-          {isAuthor && (
-            <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 50, float: 'left'}}>
-              <EditButton editItem={post} itemType={'post'}/>
-            </Grid>
-          )}
-          {isAuthor && (
-            <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 50, float: 'left'}}>
-              <DeleteButton deleteItem={post} itemType={'post'}/>
-            </Grid>
-          )}
-          {isAdmin && (
-            <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 50, float: 'left'}}>
-              <SetVisibleButton visibleItem={post} itemType={'post'}/>
-            </Grid>
-          )}
-        </Grid>
-      </Grid>
-
-      <Grid item xs={12}>
+      <Grid item xs={12} style={{paddingLeft: 30}}>
         <div dangerouslySetInnerHTML={{__html: pstContent}}/>
       </Grid>
       <Grid item xs={12}>

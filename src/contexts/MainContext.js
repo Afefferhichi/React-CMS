@@ -19,7 +19,7 @@ const MainContextProvider = ({children}) => {
       posts: [],
       post: null,
       templates: [],
-      snackbar: null,
+      snackbar: {},
       dialog2: null,
     });
 

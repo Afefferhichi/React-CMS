@@ -7,7 +7,7 @@ import CallServer from "../../../utils/CallServer";
 
 const PasswordChangeForm = props => {
   const {_id, firstname, lastname, email} = props.user;
-  const {closeDialog, dispatch} = useContext(MainContext);
+  const {closeDialog, openSnackBar, dispatch} = useContext(MainContext);
 
   const onPressCloseHandler = () => {
     closeDialog(dispatch);
@@ -27,10 +27,12 @@ const PasswordChangeForm = props => {
         await CallServer.put('admin/changeUserPassword/' + _id, {
           mode: 'updatePasswordByAdmin',
           newPassword: form.values.password,
-        })
+        });
+        openSnackBar({message: 'Successfully updated the password', severity: 'success'}, dispatch);
         onPressCloseHandler();
       } catch (err) {
-        alert(err.message);
+        openSnackBar({message: err.message, severity: 'success'}, dispatch);
+        onPressCloseHandler();
       }
     }
   });

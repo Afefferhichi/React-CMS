@@ -9,7 +9,7 @@ import {GoogleLogin} from "react-google-login";
 
 
 const LoginForm = () => {
-  const {login, signUp, dispatch} = useContext(MainContext);
+  const {login, signUp, openSnackBar, dispatch} = useContext(MainContext);
   const history = useHistory();
 
   const responseFacebook = async response => {
@@ -22,10 +22,10 @@ const LoginForm = () => {
           await login({email: response.email, password: '12345678'}, dispatch);
           history.push('/home');
         } catch (err) {
-          alert(err.message);
+          openSnackBar({message: err.message, severity: 'error'}, dispatch);
         }
       } else {
-        alert(err.message);
+        openSnackBar({message: err.message, severity: 'error'}, dispatch);
       }
     }
   }
@@ -37,7 +37,7 @@ const LoginForm = () => {
         history.push('/home');
       }
     } catch (err) {
-      alert(err.message);
+      openSnackBar({message: err.message, severity: 'error'}, dispatch);
     }
   }
 
@@ -51,7 +51,7 @@ const LoginForm = () => {
         await login({email, password}, dispatch);
         history.push('/home');
       } catch (err) {
-        alert(err.message);
+        openSnackBar({message: err.message, severity: 'error'}, dispatch);
       }
     }
   });

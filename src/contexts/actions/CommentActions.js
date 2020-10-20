@@ -39,6 +39,8 @@ const deleteComment = async ({id, post_id}, dispatch) => {
     const request = await CallServer.delete('comments/' + id);
     if (request.success) {
       dispatch({type: DELETE_COMMENT, payload: {id, post_id}});
+    } else {
+      throw request;
     }
   } catch (err) {
     throw err;
@@ -62,6 +64,8 @@ const helpfulComment = async ({post_id, comment_id, helpful}, dispatch) => {
     if (request.success) {
       const {cmtHelpfuls, cmtUnHelpfuls} = request;
       dispatch({type: HELPFUL_COMMENTS, payload: {post_id, comment_id, cmtHelpfuls, cmtUnHelpfuls}});
+    } else {
+      throw request;
     }
   } catch (err) {
     throw err;
@@ -74,6 +78,8 @@ const updateComment = async ({post_id, comment_id, comment}, dispatch) => {
     if (request.success) {
       const {updatedComment} = request;
       await dispatch({type: UPDATE_COMMENT, payload: {post_id, comment_id, updatedComment}});
+    } else {
+      throw request;
     }
   } catch (err) {
     throw err;
