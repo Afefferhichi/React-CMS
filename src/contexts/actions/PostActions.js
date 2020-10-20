@@ -1,4 +1,12 @@
-import {ADD_POST, DELETE_POST, GET_POST, LIKE_POST, LOAD_POST, UPDATE_POST} from "../reducers/PostReducer";
+import {
+  ADD_POST,
+  DELETE_POST,
+  GET_POST,
+  LIKE_POST,
+  LOAD_POST,
+  UPDATE_POST,
+  VISIBLE_POST
+} from "../reducers/PostReducer";
 import CallServer from '../../utils/CallServer';
 
 const loadPosts = async (dispatch) => {
@@ -85,11 +93,26 @@ const getPost = async (post_id, dispatch) => {
   }
 };
 
+const setVisiblePost = async (post_id, visibleMethod, dispatch) => {
+  try {
+    const request = await CallServer.put('admin/posts/' + post_id + '/' + visibleMethod);
+    if (request.success) {
+      const {updatedPost} = request;
+      await dispatch({type: VISIBLE_POST, payload: updatedPost});
+    } else {
+      throw request;
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
 export default {
   loadPosts,
   deletePost,
   addPost,
   updatePost,
   likePost,
-  getPost
+  getPost,
+  setVisiblePost
 };

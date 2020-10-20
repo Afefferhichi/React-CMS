@@ -5,7 +5,7 @@ const runTest = (controllerName, actionName, arguments) => {
     testFunc(arguments).then(result => console.log(result));
   } else {
     testFunc(arguments).then((result) => {
-      console.log('result', JSON.stringify(result));
+      console.log('result', (result));
       const testFunc2 = require('../' + controllerName + '/list');
       // testFunc2(arguments).then(result => console.log(result));
     });

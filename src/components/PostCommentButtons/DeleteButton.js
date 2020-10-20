@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from "react";
 import {DeleteIcon, IconButton} from "../../themes/mui/Elements";
 import {MainContext} from "../../contexts/MainContext";
 
-let willUnmount = false;
 const DeleteButton = props => {
   const [onProcessing, setOnProcessing] = useState('');
   const {deletePost, deleteComment, dispatch} = useContext(MainContext);
@@ -28,7 +27,6 @@ const DeleteButton = props => {
 
   const componentDidMount = () => {
     return () => {
-      willUnmount = true;
       setOnProcessing('');
     }
   };

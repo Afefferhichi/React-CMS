@@ -4,6 +4,7 @@ export const ADD_POST = 'ADD_POST';
 export const UPDATE_POST = 'UPDATE_POST';
 export const LIKE_POST = 'LIKE_POST';
 export const GET_POST = 'GET_POST';
+export const VISIBLE_POST = 'VISIBLE_POST';
 
 const PostReducer = (state, {type, payload}) => {
   switch (type) {
@@ -56,6 +57,23 @@ const PostReducer = (state, {type, payload}) => {
       return {
         ...state,
         post: payload
+      };
+    case VISIBLE_POST:
+      const originalPosts3 = [...(state.posts || [])];
+      originalPosts3.map(post => {
+        if (post._id === payload._id) {
+          post.visible = payload.visible;
+        }
+        return post;
+      });
+      const originalPost3 = state.post;
+      if(state.post && state.post._id === payload._id) {
+        originalPost3.visible = payload.visible;
+      }
+      return {
+        ...state,
+        posts: originalPosts3,
+        post: originalPost3,
       };
     default:
       return state;

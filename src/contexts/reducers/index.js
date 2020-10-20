@@ -1,11 +1,19 @@
 import UserReducer, {ADD_USER, DELETE_USER, GET_CLIENT_INFO, GET_USERS, LOG_IN, LOG_OUT, SIGN_UP} from './UserReducer';
-import PostReducer, {ADD_POST, DELETE_POST, GET_POST, LIKE_POST, LOAD_POST, UPDATE_POST} from "./PostReducer";
+import PostReducer, {
+  ADD_POST,
+  DELETE_POST,
+  GET_POST,
+  LIKE_POST,
+  LOAD_POST,
+  UPDATE_POST,
+  VISIBLE_POST
+} from "./PostReducer";
 import CommentReducer, {
   ADD_COMMENT,
   DELETE_COMMENT,
   DISABLE_COMMENT,
   ENABLE_COMMENT,
-  FLAG_COMMENT, HELPFUL_COMMENTS, UPDATE_COMMENT,
+  FLAG_COMMENT, HELPFUL_COMMENTS, UPDATE_COMMENT, VISIBLE_COMMENT,
 } from "./CommentReducer";
 import TemplateReducer, {
   ADD_TEMPLATE,
@@ -33,6 +41,7 @@ export default (state, {type, payload}) => {
     case UPDATE_POST:
     case LIKE_POST:
     case GET_POST:
+    case VISIBLE_POST:
       return PostReducer(state, {type, payload});
     case FLAG_COMMENT:
     case ENABLE_COMMENT:
@@ -41,6 +50,7 @@ export default (state, {type, payload}) => {
     case ADD_COMMENT:
     case HELPFUL_COMMENTS:
     case UPDATE_COMMENT:
+    case VISIBLE_COMMENT:
       return CommentReducer(state, {type, payload});
     case ADD_TEMPLATE:
     case LOAD_TEMPLATES:

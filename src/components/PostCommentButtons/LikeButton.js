@@ -9,10 +9,10 @@ const LikeButton = props => {
 
   const likePostPressHandler = async () => {
     setOnProcessing(mode);
-    if(itemType === 'post') {
+    if (itemType === 'post') {
       await likePost({post_id: likeItem._id, like: mode === 'like'}, dispatch);
     }
-    if(itemType === 'comment') {
+    if (itemType === 'comment') {
       await helpfulComment({comment_id: likeItem._id, post_id: likeItem.postId, helpful: mode === 'helpful'}, dispatch);
     }
     setOnProcessing('');

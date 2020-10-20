@@ -4,7 +4,9 @@ import {
   DISABLE_COMMENT,
   ENABLE_COMMENT,
   FLAG_COMMENT,
-  HELPFUL_COMMENTS, UPDATE_COMMENT,
+  HELPFUL_COMMENTS,
+  UPDATE_COMMENT,
+  VISIBLE_COMMENT,
 } from "../reducers/CommentReducer";
 import CallServer from "../../utils/CallServer";
 
@@ -78,6 +80,20 @@ const updateComment = async ({post_id, comment_id, comment}, dispatch) => {
   }
 };
 
+const setVisibleComment = async (comment_id, visibleMethod, dispatch) => {
+  try {
+    const request = await CallServer.put('admin/comments/' + comment_id + '/' + visibleMethod);
+    if (request.success) {
+      const {updatedComment} = request;
+      await dispatch({type: VISIBLE_COMMENT, payload: updatedComment});
+    } else {
+      throw request;
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
 export default {
   flagComment,
   enableComment,
@@ -85,6 +101,7 @@ export default {
   deleteComment,
   addComment,
   helpfulComment,
-  updateComment
+  updateComment,
+  setVisibleComment,
 };
 

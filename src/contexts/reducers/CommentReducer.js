@@ -5,6 +5,7 @@ export const DELETE_COMMENT = 'DELETE_COMMENT';
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const HELPFUL_COMMENTS = 'HELPFUL_COMMENTS';
 export const UPDATE_COMMENT = 'UPDATE_COMMENT';
+export const VISIBLE_COMMENT = 'VISIBLE_COMMENT';
 
 const CommentReducer = (state, {type, payload}) => {
   switch (type) {
@@ -95,10 +96,9 @@ const CommentReducer = (state, {type, payload}) => {
       };
     case UPDATE_COMMENT:
       const originalPost4 = state.post;
-      console.log('if (originalPost4 && originalPost4._id === payload.post_id) {', originalPost4);
       if (originalPost4 && originalPost4._id === payload.post_id) {
         const existingIndex = originalPost4.comments.findIndex(comment => comment._id === payload.comment_id);
-        if(existingIndex > -1) {
+        if (existingIndex > -1) {
           originalPost4.comments[existingIndex] = payload.updatedComment;
         }
       }
@@ -107,13 +107,40 @@ const CommentReducer = (state, {type, payload}) => {
         posts: state.posts.map(post => {
           if (post._id === payload.post_id) {
             const existingIndex = post.comments.findIndex(comment => comment._id === payload.comment_id);
-            if(existingIndex > -1) {
+            if (existingIndex > -1) {
               post.comments[existingIndex] = payload.updatedComment;
             }
           }
           return post;
         }),
         post: originalPost4
+      };
+    case VISIBLE_COMMENT:
+      const originalPosts5 = [...(state.posts || [])];
+      originalPosts5.map(post => {
+        if (post._id === payload.postId) {
+          post.comments = post.comments.map(comment => {
+            if (comment._id === payload._id) {
+              comment.visible = payload.visible;
+            }
+            return comment;
+          });
+        }
+        return post;
+      });
+      const originalPost5 = state.post;
+      if (originalPost5 && originalPost5._id === payload.postId) {
+        originalPost5.comments = originalPost5.comments.map(comment => {
+          if (comment._id === payload._id) {
+            comment.visible = payload.visible;
+          }
+          return comment;
+        });
+      }
+      return {
+        ...state,
+        posts: originalPosts5,
+        post: originalPost5,
       };
     default:
       return state;

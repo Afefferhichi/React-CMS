@@ -9,6 +9,7 @@ import ShareButton from "../../PostCommentButtons/ShareButton";
 import LikeButton from "../../PostCommentButtons/LikeButton";
 import EditButton from "../../PostCommentButtons/EditButton";
 import DeleteButton from "../../PostCommentButtons/DeleteButton";
+import SetVisibleButton from "../../PostCommentButtons/SetVisibleButton";
 
 const PostContent = props => {
   const classes = usePostContentStyle();
@@ -26,17 +27,13 @@ const PostContent = props => {
     pstDislikes,
     attachments,
     author,
+    visible,
     url = window.location.origin + '/posts/' + _id,
   } = post;
   const hasPostIdInUrl = window.location.href.indexOf(_id) > -1;
 
   return (
     <>
-      {/*<Grid item xs={12}>*/}
-      {/*  <Typography>isAdmin: {String(isAdmin)}</Typography>*/}
-      {/*  <Typography>isAuthor: {String(isAuthor)}</Typography>*/}
-      {/*  <Typography>isReader: {String(isReader)}</Typography>*/}
-      {/*</Grid>*/}
       <Grid item xs={8}>
         <Grid container className={classes.grid} spacing={0} alignItems='center'>
           {hasPostIdInUrl && (
@@ -47,7 +44,7 @@ const PostContent = props => {
             </Grid>
           )}
           <Grid item xs={1}>
-            <Avatar>
+            <Avatar title={`${author.firstname} ${author.lastname} ${author.email}`}>
               {!author
                 ? 'U'
                 : (
@@ -73,29 +70,51 @@ const PostContent = props => {
                   {pstTitle}
                 </Typography>
               )}
+            {isAdmin && (
+              visible ? '' : <span style={{color: 'gray'}}>(hidden)</span>
+            )}
           </Grid>
         </Grid>
       </Grid>
       <Grid item xs={4}>
-        <Grid container className={classes.grid} spacing={2}>
-          <Grid item xs={2} container alignItems={'center'} justify={'center'}>
-            <ShareButton url={url}/>
+        <Grid container className={classes.grid} spacing={2} justify={'flex-end'}>
+          <Grid item>
+            {isReader && <ShareButton url={url}/>}
           </Grid>
-          <Grid item xs={3} container alignItems={'center'} justify={'center'}
-                className={classes.linkButtonContainer}>
-            <LikeButton itemType={'post'} mode={'like'} likeItem={post} likes={pstLikes}/>
-          </Grid>
-          <Grid item xs={3} container alignItems={'center'} justify={'center'}>
-            <LikeButton itemType={'post'} mode={'dislike'} likeItem={post} dislikes={pstDislikes}/>
-          </Grid>
-          <Grid item xs={2} container alignItems={'center'} justify={'center'}>
-            <EditButton editItem={post} itemType={'post'}/>
-          </Grid>
-          <Grid item xs={2} container alignItems={'center'} justify={'center'}>
-            <DeleteButton deleteItem={post} itemType={'post'}/>
-          </Grid>
+          {isReader && (
+            <Grid item container alignItems={'center'} justify={'center'}
+                  style={{width: 75, float: 'left'}}
+                  className={classes.linkButtonContainer}>
+              <LikeButton itemType={'post'} mode={'like'} likeItem={post} likes={pstLikes}/>
+            </Grid>
+          )}
+          {isReader && (
+            <Grid item container alignItems={'center'} justify={'center'}
+                  style={{width: 75, float: 'left'}}>
+              <LikeButton itemType={'post'} mode={'dislike'} likeItem={post} dislikes={pstDislikes}/>
+            </Grid>
+          )}
+          {isAuthor && (
+            <Grid item container alignItems={'center'} justify={'center'}
+                  style={{width: 50, float: 'left'}}>
+              <EditButton editItem={post} itemType={'post'}/>
+            </Grid>
+          )}
+          {isAuthor && (
+            <Grid item container alignItems={'center'} justify={'center'}
+                  style={{width: 50, float: 'left'}}>
+              <DeleteButton deleteItem={post} itemType={'post'}/>
+            </Grid>
+          )}
+          {isAdmin && (
+            <Grid item container alignItems={'center'} justify={'center'}
+                  style={{width: 50, float: 'left'}}>
+              <SetVisibleButton visibleItem={post} itemType={'post'}/>
+            </Grid>
+          )}
         </Grid>
       </Grid>
+
       <Grid item xs={12}>
         <div dangerouslySetInnerHTML={{__html: pstContent}}/>
       </Grid>
