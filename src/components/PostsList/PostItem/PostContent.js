@@ -1,30 +1,23 @@
-import React, {useContext, useState} from "react";
+import React, {useContext} from "react";
 import {Link} from 'react-router-dom';
-import {
-  ArrowBack,
-  Avatar,
-  CircularProgress,
-  DeleteIcon,
-  Divider,
-  EditIcon,
-  Grid,
-  IconButton,
-  ShareIcon,
-  ThumbDownIcon,
-  ThumbUpIcon,
-  Typography
-} from "project-elements";
+import {ArrowBack, Avatar, Divider, Grid, Typography} from "project-elements";
 import usePostContentStyle from './PostContent.style';
 import {MainContext} from "../../../contexts/MainContext";
-import PostForm from "../PostForm";
 import DownloadLinkItem from "../../DownloadLinkItem";
 import constants from "../../../config/constants";
+import ShareButton from "../../PostCommentButtons/ShareButton";
+import LikeButton from "../../PostCommentButtons/LikeButton";
+import EditButton from "../../PostCommentButtons/EditButton";
+import DeleteButton from "../../PostCommentButtons/DeleteButton";
 
 const PostContent = props => {
   const classes = usePostContentStyle();
-  const {closeDialog, openDialog, deletePost, updatePost, likePost, openSnackBar, dispatch} = useContext(MainContext);
-  const [onProcessing, setOnProcessing] = useState('');
+  const {client} = useContext(MainContext);
+
   const {post} = props;
+  const isAdmin = client.role === 'admin';
+  const isAuthor = client.role === 'user' && post.author._id === client._id;
+  const isReader = !isAdmin && !isAuthor;
   const {
     _id,
     pstTitle,
@@ -37,43 +30,13 @@ const PostContent = props => {
   } = post;
   const hasPostIdInUrl = window.location.href.indexOf(_id) > -1;
 
-  const deletePostPressHandler = async () => {
-    // setOnProcessing('delete');
-    await deletePost(_id, dispatch);
-    if (hasPostIdInUrl) {
-      window.history.back();
-    }
-  };
-
-  const updatePostHandler = (postData) => {
-    updatePost(_id, postData, dispatch).then(() => {
-      closeDialog(dispatch);
-    });
-  };
-
-  const editPostPressHandler = () => {
-    openDialog({title: 'Post', contentComponent: <PostForm post={post} refresh={+new Date()} onSave={updatePostHandler}/>}, dispatch);
-  };
-
-  const likePostPressHandler = async () => {
-    setOnProcessing('like');
-    await likePost({post_id: _id, like: true}, dispatch);
-    setOnProcessing('');
-  };
-
-  const dislikePostPressHandler = async () => {
-    setOnProcessing('dislike');
-    await likePost({post_id: _id, like: false}, dispatch);
-    setOnProcessing('');
-  };
-
-  const sharePressHandler = () => {
-    navigator.clipboard.writeText(url);
-    openSnackBar({message: 'Copied to clipboard'}, dispatch)
-  };
-
   return (
     <>
+      {/*<Grid item xs={12}>*/}
+      {/*  <Typography>isAdmin: {String(isAdmin)}</Typography>*/}
+      {/*  <Typography>isAuthor: {String(isAuthor)}</Typography>*/}
+      {/*  <Typography>isReader: {String(isReader)}</Typography>*/}
+      {/*</Grid>*/}
       <Grid item xs={8}>
         <Grid container className={classes.grid} spacing={0} alignItems='center'>
           {hasPostIdInUrl && (
@@ -116,36 +79,20 @@ const PostContent = props => {
       <Grid item xs={4}>
         <Grid container className={classes.grid} spacing={2}>
           <Grid item xs={2} container alignItems={'center'} justify={'center'}>
-            <IconButton onClick={sharePressHandler}>
-              <ShareIcon/>
-            </IconButton>
+            <ShareButton url={url}/>
           </Grid>
           <Grid item xs={3} container alignItems={'center'} justify={'center'}
                 className={classes.linkButtonContainer}>
-            <Typography>
-              {pstLikes && pstLikes.length}
-            </Typography>
-            <IconButton disabled={onProcessing === 'like'} onClick={likePostPressHandler}>
-              {onProcessing === 'like' ? <CircularProgress size={'1.2rem'}/> : <ThumbUpIcon/>}
-            </IconButton>
+            <LikeButton itemType={'post'} mode={'like'} likeItem={post} likes={pstLikes}/>
           </Grid>
           <Grid item xs={3} container alignItems={'center'} justify={'center'}>
-            <Typography>
-              {pstDislikes && pstDislikes.length}
-            </Typography>
-            <IconButton disabled={onProcessing === 'dislike'} onClick={dislikePostPressHandler}>
-              {onProcessing === 'dislike' ? <CircularProgress size={'1.2rem'}/> : <ThumbDownIcon/>}
-            </IconButton>
+            <LikeButton itemType={'post'} mode={'dislike'} likeItem={post} dislikes={pstDislikes}/>
           </Grid>
           <Grid item xs={2} container alignItems={'center'} justify={'center'}>
-            <IconButton onClick={editPostPressHandler}>
-              <EditIcon/>
-            </IconButton>
+            <EditButton editItem={post} itemType={'post'}/>
           </Grid>
           <Grid item xs={2} container alignItems={'center'} justify={'center'}>
-            <IconButton disabled={onProcessing === 'delete'} color='secondary' onClick={deletePostPressHandler}>
-              <DeleteIcon/>
-            </IconButton>
+            <DeleteButton deleteItem={post} itemType={'post'}/>
           </Grid>
         </Grid>
       </Grid>
@@ -157,7 +104,7 @@ const PostContent = props => {
       </Grid>
       <Grid item>
         {attachments.map((attachment, index) => (
-          <DownloadLinkItem key={String(index)} attachment={attachment} />
+          <DownloadLinkItem key={String(index)} attachment={attachment}/>
         ))}
       </Grid>
     </>

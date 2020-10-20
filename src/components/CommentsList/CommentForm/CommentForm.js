@@ -5,8 +5,9 @@ import {makeAttachFormData} from "../../../utils/Misc";
 import DownloadLinkItem from "../../DownloadLinkItem";
 
 const CommentForm = props => {
-  const {onSave, comment = {}} = props;
-  const [cmtValue, setCmtValue] = useState(comment.cmtValue);
+  const {onSave, itemData = {}} = props;
+  const comment = itemData;
+  const [cmtValue, setCmtValue] = useState(String(comment.cmtValue || ''));
   const [attachments, setAttachments] = useState(comment.attachments || []);
   const [saving, setSaving] = useState(false);
   const [refresh, setRefresh] = useState(0);
@@ -18,12 +19,11 @@ const CommentForm = props => {
   const keyPressHandler = async (e) => {
     const {charCode} = e;
     if (charCode === 13) {
-      saveFormHandler();
+      await saveFormHandler();
     }
   };
   const changeValueHandler = e => {
-    const {target: {value}} = e;
-    setCmtValue(value);
+    setCmtValue(e.target.value);
   };
   const onReadFiles = (files) => {
     setAttachments(files);

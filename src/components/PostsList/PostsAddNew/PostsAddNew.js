@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import usePostAddNewStyle from './PostsAddNew.style'
-import PostForm from "../PostForm";
+import PostForm from "../../PostForm";
 import {MainContext} from "../../../contexts/MainContext";
 import {Button} from "@material-ui/core";
 

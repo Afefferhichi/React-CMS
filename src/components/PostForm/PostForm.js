@@ -1,12 +1,13 @@
 import React, {useState} from "react";
 import {Button, CircularProgress, Divider, Grid, TextField} from "project-elements";
-import {br2nl, makeAttachFormData, nl2br} from "../../../utils/Misc";
-import AttachmentItem from "../../AttachmentItem";
-import DownloadLinkItem from "../../DownloadLinkItem";
+import {br2nl, makeAttachFormData, nl2br} from "../../utils/Misc";
+import AttachmentItem from "../AttachmentItem";
+import DownloadLinkItem from "../DownloadLinkItem";
 
 const PostForm = props => {
   const [onSaving, setOnSaving] = useState(false);
-  const {onSave, post: {attachments = [], pstTitle = '', pstContent = ''} = {}} = props;
+  const {onSave, itemData = {}} = props;
+  const {attachments = [], pstTitle = '', pstContent = ''} = itemData;
   const formData = {
     pstTitle,
     pstContent,

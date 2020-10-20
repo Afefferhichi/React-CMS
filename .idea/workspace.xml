@@ -20,11 +20,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/utils/tests/admin/allUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/tests/admin/disableUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/tests/admin/enableUser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/DeleteButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/EditButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/LikeButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/ShareButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentForm/CommentForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentForm/CommentForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostForm/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostForm/PostForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostForm/PostForm.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostForm/PostForm.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostForm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostForm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/UserHome/UserHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Home/UserHome/UserHome.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,19 +63,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\admin" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\components\SettingsItems" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\components\UpdateEmail" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\modules\Admin\Templates\TemplatesList" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\modules\Templates\TemplatesList" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\admin" />
       <recent name="D:\contribute\3almadmoun\front-end\src\components\UsersList" />
       <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\users" />
       <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\templates" />
       <recent name="D:\contribute\3almadmoun\front-end\src\modules\Admin\Templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\contribute\3almadmoun\front-end\src\components" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\admin" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\components\SettingsItems" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\components\UpdateEmail" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\modules\Admin\Templates\TemplatesList" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -87,7 +97,8 @@
       <workItem from="1603082023049" duration="15778000" />
       <workItem from="1603129193065" duration="38000" />
       <workItem from="1603129234568" duration="3214000" />
-      <workItem from="1603132477118" duration="12224000" />
+      <workItem from="1603132477118" duration="12829000" />
+      <workItem from="1603169916637" duration="10026000" />
     </task>
     <servers />
   </component>
@@ -141,9 +152,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="615" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603087036441" />
-    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603137327721">
+    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603177100244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603137327721" />
+    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603177100244" />
   </component>
 </project>
