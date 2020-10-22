@@ -1,12 +1,12 @@
-const runTest = (controllerName, actionName, arguments) => {
+const runApiTest = (controllerName, actionName, arguments) => {
   console.log(controllerName, actionName, arguments);
-  const testFunc = require('../' + controllerName + '/' + actionName);
+  const testFunc = require('../api_tests/' + controllerName + '/' + actionName);
   if (actionName === 'list') {
     testFunc(arguments).then(result => console.log((result)));
   } else {
     testFunc(arguments).then((result) => {
       console.log('result', (result));
-      const testFunc2 = require('../' + controllerName + '/list');
+      const testFunc2 = require('../api_tests/' + controllerName + '/list');
       // testFunc2(arguments).then(result => console.log(result));
     });
   }
@@ -14,5 +14,5 @@ const runTest = (controllerName, actionName, arguments) => {
 
 
 module.exports = {
-  runTest
+  runApiTest
 };

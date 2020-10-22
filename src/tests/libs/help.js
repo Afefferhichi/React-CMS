@@ -2,12 +2,12 @@ const showHelp = () => {
   console.log(`
     Command syntax
     
-    yarn test [controllerName]:[actionName]
+    yarn test2 [controllerName]:[actionName]
     
     
     Example:
     
-    yarn test posts:create
+    yarn test2 posts:create
   `)
 };
 
