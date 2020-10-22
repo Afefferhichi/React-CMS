@@ -1,5 +1,5 @@
 import constants from "../config/constants";
-import {TEST_TOKEN} from './tests/config/constants'
+import {TEST_TOKEN} from '../tests/config/constants'
 
 const timeout = 5000;
 const LocalStorageIsNotDefined = (typeof localStorage === 'undefined');
@@ -92,7 +92,7 @@ class CallServerClass {
           try {
             responseText = await response.text();
             clearTimeout(this.timeout);
-            console.log('responseText', responseText);
+            // console.log('responseText', responseText);
             return JSON.parse(responseText);
           } catch (error) {
             console.log(error, response);

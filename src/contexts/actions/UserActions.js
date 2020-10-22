@@ -76,7 +76,7 @@ const logout = async (dispatch) => {
 
 const getUsers = async (dispatch) => {
   try {
-    let res = await fetch(constants.API_SERVER + 'allUsers', {
+    let res = await fetch(constants.API_SERVER + 'users', {
       headers: {
         'token': localStorage.getItem('token')
       }
