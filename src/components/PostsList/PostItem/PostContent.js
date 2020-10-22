@@ -64,11 +64,11 @@ const PostContent = props => {
             <Grid item xs={hasPostIdInUrl ? 9 : 10}>
               {!hasPostIdInUrl
                 ? (
-                  <Link to={'/posts/' + _id}>
-                    <Typography variant='h6'>
+                  <Typography variant='h6'>
+                    <Link to={'/posts/' + _id}>
                       {pstTitle}
-                    </Typography>
-                  </Link>
+                    </Link>
+                  </Typography>
                 )
                 : (
                   <Typography variant='h6'>
@@ -93,7 +93,8 @@ const PostContent = props => {
             </Grid>
             <Grid item container alignItems={'center'} justify={'center'}
                   style={{width: 75, float: 'left'}}>
-              <LikeButton itemType={'post'} mode={'dislike'} likeItem={post} dislikes={pstDislikes} readOnly={!isReader}/>
+              <LikeButton itemType={'post'} mode={'dislike'} likeItem={post} dislikes={pstDislikes}
+                          readOnly={!isReader}/>
             </Grid>
             {isAuthor && (
               <Grid item container alignItems={'center'} justify={'center'}
