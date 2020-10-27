@@ -22,7 +22,7 @@ const UsersList = props => {
 
   const setEnabledHandler = async (event, user) => {
     const enableMethod = user.enabled ? 'disable' : 'enable';
-    await CallServer.put('admin/setUserEnabled/' + user._id + '/' + enableMethod);
+    await CallServer.put('setUserEnabled/' + user._id + '/' + enableMethod);
     openSnackBar({message: 'Successfully ' + enableMethod + 'd', severity: 'success'}, dispatch);
     getUsers(dispatch);
   }
@@ -53,49 +53,51 @@ const UsersList = props => {
   useEffect(componentDidMount, []);
   return (
     <div className={classes.table}>
-      <MaterialTable
-        options={{
-          actionsColumnIndex: -1,
-        }}
-        title="Manage Users"
-        columns={[
-          {title: 'First Name', field: 'firstname'},
-          {title: 'Email', field: 'email'},
-          {title: 'Enabled', field: 'enabled', type: 'boolean'},
-        ]}
-        tableRef={tableRef}
-        data={users}
-        actions={[
-          {
-            tooltip: 'Add',
-            icon: 'add',
-            isFreeAction: true,
-            onClick: onPressAddHandler
-          },
-          rowData => ({
-            tooltip: 'Enable',
-            icon: 'visibility',
-            disabled: rowData.enabled,
-            onClick: setEnabledHandler
-          }),
-          rowData => ({
-            tooltip: 'Disable',
-            icon: 'visibility_off',
-            disabled: !rowData.enabled,
-            onClick: setEnabledHandler
-          }),
-          {
-            tooltip: 'Change password',
-            icon: VpnKeyIcon,
-            onClick: onPressChangePasswordHandler
-          },
-          {
-            tooltip: 'Delete',
-            icon: 'delete',
-            onClick: onPressDeleteHandler
-          }
-        ]}
-      />
+      {users && (
+        <MaterialTable
+          options={{
+            actionsColumnIndex: -1,
+          }}
+          title="Manage Users"
+          columns={[
+            {title: 'First Name', field: 'firstname'},
+            {title: 'Email', field: 'email'},
+            {title: 'Enabled', field: 'enabled', type: 'boolean'},
+          ]}
+          tableRef={tableRef}
+          data={users}
+          actions={[
+            {
+              tooltip: 'Add',
+              icon: 'add',
+              isFreeAction: true,
+              onClick: onPressAddHandler
+            },
+            rowData => ({
+              tooltip: 'Enable',
+              icon: 'visibility',
+              disabled: rowData.enabled,
+              onClick: setEnabledHandler
+            }),
+            rowData => ({
+              tooltip: 'Disable',
+              icon: 'visibility_off',
+              disabled: !rowData.enabled,
+              onClick: setEnabledHandler
+            }),
+            {
+              tooltip: 'Change password',
+              icon: VpnKeyIcon,
+              onClick: onPressChangePasswordHandler
+            },
+            {
+              tooltip: 'Delete',
+              icon: 'delete',
+              onClick: onPressDeleteHandler
+            }
+          ]}
+        />
+      )}
     </div>
   );
 }

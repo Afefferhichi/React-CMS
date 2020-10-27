@@ -1,0 +1,12 @@
+{
+  "firstname": "firstname",
+  "lastname": "lastname",
+  "email": "email1@abc.com",
+  "newEmail": "newemail1@abcdef.com",
+  "password": "password",
+  "newPassword": "newPassword",
+  "address": "address",
+  "telephone": "12321234122",
+  "organisation": "organisation",
+  "avatarPath": "./public/logo.png"
+}

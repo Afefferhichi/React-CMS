@@ -8,7 +8,7 @@ import Logo from "../../../assets/logo.png";
 
 const RegisterForm = () => {
   const history = useHistory();
-  const {signUp, dispatch} = useContext(MainContext);
+  const {signUp, openSnackBar, dispatch} = useContext(MainContext);
 
   const form = useFormik({
     initialValues: {
@@ -25,8 +25,9 @@ const RegisterForm = () => {
       try {
         await signUp(formData, dispatch);
         history.push('/home');
+        openSnackBar({message: 'Successfully registered!', severity: 'success'}, dispatch);
       } catch (err) {
-        alert(err.message);
+        openSnackBar({message: err.message, severity: 'error'}, dispatch);
       }
     }
   });

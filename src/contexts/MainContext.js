@@ -9,6 +9,8 @@ import SnackbarActions from "./actions/SnackbarActions";
 import Dialog2Actions from "./actions/Dialog2Actions";
 
 export const MainContext = createContext();
+export let dispatch2 = {};
+
 const MainContextProvider = ({children}) => {
   const clientInfo = (JSON.parse(localStorage.getItem('clientInfo')));
 
@@ -22,6 +24,8 @@ const MainContextProvider = ({children}) => {
       snackbar: {},
       dialog2: null,
     });
+
+  dispatch2 = dispatch;
 
   useEffect(() => {
     localStorage.setItem('clientInfo', (JSON.stringify(client)))

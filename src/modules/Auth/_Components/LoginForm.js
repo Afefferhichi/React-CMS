@@ -33,7 +33,7 @@ const LoginForm = () => {
   const responseGoogle = async (response) => {
     try {
       if (!response.error) {
-        await login({email: 'tests@tests.com', password: '12345678'});
+        await login({email: 'cli@cli.com', password: '12345678'});
         history.push('/home');
       }
     } catch (err) {

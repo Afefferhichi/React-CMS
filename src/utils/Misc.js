@@ -26,9 +26,21 @@ const makeAttachFormData = argFormData => {
   return newFormData;
 };
 
+const isBrowser = () => {
+  return process.title === "browser"
+}
+
+const delay_ms = (ms) => new Promise((resolve, eject) => {
+  setTimeout(() => {
+    resolve(true)
+  }, ms);
+});
+
 export {
   nl2br,
   br2nl,
   capitalize,
-  makeAttachFormData
+  makeAttachFormData,
+  isBrowser,
+  delay_ms
 }

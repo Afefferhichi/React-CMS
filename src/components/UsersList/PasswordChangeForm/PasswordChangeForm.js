@@ -24,7 +24,7 @@ const PasswordChangeForm = props => {
     }),
     onSubmit: async (formData) => {
       try {
-        await CallServer.put('admin/changeUserPassword/' + _id, {
+        await CallServer.put('changeUserPassword/' + _id, {
           mode: 'updatePasswordByAdmin',
           newPassword: form.values.password,
         });

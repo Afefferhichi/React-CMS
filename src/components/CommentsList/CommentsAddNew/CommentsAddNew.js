@@ -1,14 +1,14 @@
 import React, {useContext} from "react";
 import CommentForm from "../CommentForm";
-import {MainContext} from "../../../contexts/MainContext";
+import {dispatch2, MainContext} from "../../../contexts/MainContext";
 
 const CommentsAddNew = props => {
-  const {addComment, openSnackBar, dispatch} = useContext(MainContext);
+  const {addComment, openSnackBar} = useContext(MainContext);
   const {post_id} = props;
 
   const addCommentHandler = async (formData) => {
-    await addComment({post_id, comment: formData}, dispatch);
-    openSnackBar({message: 'Successfully created!', severity: 'success'}, dispatch);
+    await addComment({post_id, comment: formData}, dispatch2);
+    openSnackBar({message: 'Successfully created!', severity: 'success'}, dispatch2);
   };
 
   return (

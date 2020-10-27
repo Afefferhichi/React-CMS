@@ -5,10 +5,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "cls && jest --runInBand",
+    "test:apis:users": "cls && jest --testPathPattern=__tests__/apis/users",
+    "test:apis:admin": "cls && jest --testPathPattern=__tests__/apis/admin",
+    "_test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "postinstall": "link-module-alias",
-    "test2": "cls && node -r esm src/tests/api_tests/index.js"
+    "cli": "cls && node -r esm cli/api_calls/index.js"
   },
   "_moduleAliases": {
     "project-elements": "./src/themes/mui/Elements.js"
@@ -46,10 +49,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
     "abort-controller": "^3.0.0",
+    "add": "^2.0.6",
+    "dotenv": "^8.2.0",
     "esm": "^3.2.25",
     "form-data": "^3.0.0",
     "https": "^1.0.0",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "yarn": "^1.22.10"
   }
 }
