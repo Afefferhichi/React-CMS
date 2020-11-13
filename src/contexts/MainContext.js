@@ -5,6 +5,7 @@ import UserActions from './actions/UserActions';
 import PostActions from './actions/PostActions';
 import CommentActions from './actions/CommentActions';
 import TemplateActions from './actions/TemplateActions';
+import WebPageActions from './actions/WebPageActions';
 import SnackbarActions from "./actions/SnackbarActions";
 import Dialog2Actions from "./actions/Dialog2Actions";
 
@@ -14,13 +15,14 @@ export let dispatch2 = {};
 const MainContextProvider = ({children}) => {
   const clientInfo = (JSON.parse(localStorage.getItem('clientInfo')));
 
-  const [{client, users, posts, post, templates, snackbar, dialog2}, dispatch] =
+  const [{client, users, posts, post, templates, webpages, snackbar, dialog2}, dispatch] =
     useReducer(MainReducer, {
       client: clientInfo,
       users: [],
       posts: [],
       post: null,
       templates: [],
+      webpages: [],
       snackbar: {},
       dialog2: null,
     });
@@ -42,12 +44,14 @@ const MainContextProvider = ({children}) => {
         posts,
         post,
         templates,
+        webpages,
         snackbar,
         dialog2,
         ...UserActions,
         ...PostActions,
         ...CommentActions,
         ...TemplateActions,
+        ...WebPageActions,
         ...SnackbarActions,
         ...Dialog2Actions,
       }}>

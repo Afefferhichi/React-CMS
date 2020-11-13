@@ -20,112 +20,86 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/__tests__/apis/admin/manageUsers.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/apis/users/UsersModule.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/demo_data/admin_data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/demo_data/user_data1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/demo_data/user_data2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/__tests__/helpers/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/admin/allUsers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/admin/changeUserPassword.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/admin/disableUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/admin/enableUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/admin/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/admin/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/attachments/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/attachments/show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/comments/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/comments/helpful.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/comments/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/comments/setVisible.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/comments/unhelpful.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/dislike.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/like.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/setVisible.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/templates/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/templates/disable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/templates/enable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/templates/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/templates/makeInUse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/templates/makeUnUse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/templates/show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/users/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/users/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/users/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/users/profile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/webpages/create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/webpages/delete.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/webpages/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/webpages/show.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/webpages/update.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/libs/beautify_json.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/libs/test_utils.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/TokenManager.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/config/credentials.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/libs/arguments.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/libs/helper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/test_files.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/user/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/user/template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPageBox/WebPageBox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPageBox/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPageEditorForm/WebPageEditorForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPageEditorForm/WebPageEditorForm.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPageEditorForm/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/actions/WebPageActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/contexts/reducers/WebPageReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Edit/Edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Edit/Edit.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Edit/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/List/List.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/List/List.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/List/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/New/New.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/New/New.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/New/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.style.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Show/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/apis/admin/manageUsers.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apis/admin/manageUsers.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/apis/users/UsersModule.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apis/users/UsersModule.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/demo_data/admin_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apis/demo_data/admin_data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/demo_data/user_data1.json" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apis/demo_data/user_data1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/demo_data/user_data2.json" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apis/demo_data/user_data2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/helpers/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apis/helpers/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/helpers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/apis/helpers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/api_calls/webpages/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/webpages/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/api_calls/webpages/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/webpages/update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentsAddNew/CommentsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentsAddNew/CommentsAddNew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Dialog2/Dialog2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Dialog2/Dialog2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/ShareButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/ShareButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/PasswordChangeForm/PasswordChangeForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/PasswordChangeForm/PasswordChangeForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CustomTemplateEditor/CustomTemplateEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomHTMLEditor/CustomHTMLEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CustomTemplateEditor/CustomTemplateEditor.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomHTMLEditor/CustomHTMLEditor.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CustomTemplateEditor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomHTMLEditor/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SnackBar/SnackBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SnackBar/SnackBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TemplateBox/TemplateBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TemplateBox/TemplateBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TemplateEditorForm/TemplateEditorForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TemplateEditorForm/TemplateEditorForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/contexts/MainContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/MainContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/actions/UserActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/UserActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/actions/SnackbarActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/SnackbarActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesEdit/AdminTemplatesEdit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/Edit/Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesEdit/AdminTemplatesEdit.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/Edit/Edit.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesEdit/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/Edit/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesList/AdminTemplatesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesList/AdminTemplatesList.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/List/AdminTemplatesList.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/List/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesNew/AdminTemplatesNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/New/New.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesNew/AdminTemplatesNew.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/New/New.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Templates/AdminTemplatesNew/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Templates/New/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Users/AdminUsersList/AdminUsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Users/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Users/AdminUsersList/AdminUsersList.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Users/List/List.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Users/AdminUsersList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Users/List/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/Auth/_Components/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Auth/_Components/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Auth/_Components/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Auth/_Components/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/admin/allUsers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/admin/changeUserPassword.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/admin/disableUser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/admin/enableUser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/admin/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/helpers/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/attachments/show.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/comments/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/comments/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/comments/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/comments/helpful.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/comments/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/comments/setVisible.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/comments/unhelpful.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/comments/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/comments/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/posts/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/dislike.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/like.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/setVisible.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/show.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/posts/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/posts/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/templates/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/disable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/enable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/makeInUse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/makeUnUse.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/show.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/templates/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/templates/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/users/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/users/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/users/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/users/profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/users/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/users/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/users/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/users/update.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/users/update2.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/users/update2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/webpages/create.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/webpages/delete.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/webpages/list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/webpages/show.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/api_tests/webpages/update.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/config/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/config/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/libs/command_utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/libs/command_utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/libs/help.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/libs/help.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/libs/test_utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CallServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CallServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Misc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Misc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/AdminHome/AdminHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Home/AdminHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/AdminHome/AdminHome.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Home/AdminHome.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/AdminHome/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Home/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/UserHome/UserHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Home/UserHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/UserHome/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Posts/ShowPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Posts/ShowPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Posts/ShowPost.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Posts/ShowPost.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Settings/Settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Settings/Settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Settings/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Settings/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Templates/UserTemplatesList/TemplatesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Templates/List/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Templates/UserTemplatesList/TemplatesList.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Templates/List/List.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Templates/UserTemplatesList/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Templates/List/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +122,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.68" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/__tests__/demo_data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/User/WebPages" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Users\CTO\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\202.7660.23\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -156,18 +130,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\contribute\3almadmoun\front-end\src\modules\User\WebPages" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\components" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\reducers" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\actions" />
       <recent name="D:\contribute\3almadmoun\front-end\__tests__\demo_data" />
-      <recent name="D:\contribute\3almadmoun\front-end\__tests__\apis\users" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\tests\api_tests\attachments" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils\tests\users" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\contribute\3almadmoun\front-end\src\modules\User" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\modules\Admin" />
+      <recent name="D:\contribute\3almadmoun\front-end\__tests__\apis" />
+      <recent name="D:\contribute\3almadmoun\front-end\__tests__\ui\admin" />
       <recent name="D:\contribute\3almadmoun\front-end\__tests__" />
-      <recent name="D:\contribute\3almadmoun\front-end" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\utils" />
-      <recent name="D:\contribute\3almadmoun\front-end\__tests__\apis\users" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\tests\libs" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -199,6 +173,11 @@
       <workItem from="1603427658353" duration="57895000" />
       <workItem from="1603718469500" duration="320000" />
       <workItem from="1603718868784" duration="1721000" />
+      <workItem from="1603992650400" duration="1978000" />
+      <workItem from="1604580565669" duration="1977000" />
+      <workItem from="1605078232775" duration="2945000" />
+      <workItem from="1605205236583" duration="1291000" />
+      <workItem from="1605238949657" duration="19875000" />
     </task>
     <servers />
   </component>
@@ -244,14 +223,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1603441045083" />
-    <state x="232" y="54" width="1102" height="641" key="find.popup" timestamp="1603639427146">
+    <state x="232" y="54" width="1102" height="641" key="find.popup" timestamp="1605282981002">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="232" y="54" width="1102" height="641" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1603639427146" />
-    <state x="615" y="190" key="run.anything.popup" timestamp="1603659777588">
+    <state x="232" y="54" width="1102" height="641" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605282981002" />
+    <state x="615" y="190" key="run.anything.popup" timestamp="1605280022244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="615" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1603659777588" />
+    <state x="615" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605280022244" />
     <state x="630" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603482383045">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

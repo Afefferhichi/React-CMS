@@ -49,9 +49,10 @@ const LoginForm = () => {
     onSubmit: async ({email, password}) => {
       try {
         await login({email, password}, dispatch);
+        openSnackBar({message: 'Successfully logged in!', severity: 'success'}, dispatch);
         history.push('/home');
       } catch (err) {
-        openSnackBar({message: err.message, severity: 'error'}, dispatch);
+        openSnackBar({message: err.message, severity: 'error', duration: 100000}, dispatch);
       }
     }
   });
@@ -79,7 +80,7 @@ const LoginForm = () => {
         </div>
       </div>
       <div className="footer col-md-10 offset-1">
-        <button type="submit" className="btn login-button">Login</button>
+        <button type="submit" className="btn login-button" id={'loginButton'}>Login</button>
         <div className="Social">
           <FacebookLogin
             appId="749223212598224"

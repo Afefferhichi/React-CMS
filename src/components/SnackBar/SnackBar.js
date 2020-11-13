@@ -10,7 +10,7 @@ const SnackBar = props => {
   const {snackbar = {}, closeSnackBar, dispatch} = useContext(MainContext);
   const snackbarRef = createRef();
 
-  const {message = '', severity = 'success', opened = false} = snackbar;
+  const {message = '', severity = 'success', opened = false, duration = 5000} = snackbar;
 
   return (
     <Snackbar
@@ -19,8 +19,10 @@ const SnackBar = props => {
         vertical: 'bottom',
         horizontal: 'center',
       }}
+      id={'snackBar'}
+      severity={severity}
       open={opened}
-      autoHideDuration={5000}
+      autoHideDuration={duration}
       onClose={() => closeSnackBar(dispatch)}
     >
       <Alert

@@ -1,0 +1,4 @@
+{
+  "login": "./user/login.js",
+  "template": "./user/template.js"
+}

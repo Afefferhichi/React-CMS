@@ -22,6 +22,13 @@ import TemplateReducer, {
   ENABLE_TEMPLATE, LOAD_TEMPLATES,
   UPDATE_TEMPLATE
 } from './TemplateReducer';
+import WebPageReducer, {
+  ADD_WEBPAGE,
+  DELETE_WEBPAGE,
+  DISABLE_WEBPAGE,
+  ENABLE_WEBPAGE, LOAD_WEBPAGES,
+  UPDATE_WEBPAGE
+} from './WebPageReducer';
 import SnackbarReducer, {OPEN_CLOSE_SNACKBAR} from "./SnackbarReducer";
 import Dialog2Reducer, {OPEN_CLOSE_DIALOG2} from "./Dialog2Reducer";
 
@@ -59,6 +66,13 @@ export default (state, {type, payload}) => {
     case UPDATE_TEMPLATE:
     case DELETE_TEMPLATE:
       return TemplateReducer(state, {type, payload});
+    case ADD_WEBPAGE:
+    case LOAD_WEBPAGES:
+    case ENABLE_WEBPAGE:
+    case DISABLE_WEBPAGE:
+    case UPDATE_WEBPAGE:
+    case DELETE_WEBPAGE:
+      return WebPageReducer(state, {type, payload});
     case OPEN_CLOSE_SNACKBAR:
       return SnackbarReducer(state, {type, payload});
     case OPEN_CLOSE_DIALOG2:

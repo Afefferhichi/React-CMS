@@ -3,7 +3,7 @@ import {useFormik} from "formik";
 import * as Yup from "yup";
 import {Button, Container, TextField, Typography} from "project-elements";
 import useTemplateEditorStyles from "./TemplateEditorForm.style";
-import CustomTemplateEditor from "../CustomTemplateEditor";
+import CustomHTMLEditor from "../CustomHTMLEditor";
 
 const G_Object = {};
 
@@ -39,7 +39,7 @@ const TemplateEditorForm = props => {
 
   return (
     <Container>
-      <CustomTemplateEditor template={template} getTemplateData={getTemplateData}/>
+      <CustomHTMLEditor htmlData={template} getHTMLData={getTemplateData}/>
       <form className={classes.form} onSubmit={form.handleSubmit}>
         <TextField
           variant="outlined"
