@@ -9,7 +9,7 @@ import WebPagesEdit from "../modules/User/WebPages/Edit";
 import WebPagesNew from "../modules/User/WebPages/New";
 import WebPagesShow from "../modules/User/WebPages/Show";
 
-import Search from "../modules/Admin/Search";
+import Search from "../modules/Search";
 import ShowPost from "../modules/User/Posts/ShowPost";
 
 // For admin users

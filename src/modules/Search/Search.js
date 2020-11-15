@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { MainContext } from '../../../contexts/MainContext';
+import { MainContext } from '../../contexts/MainContext';
 import { useParams, Redirect } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
@@ -230,5 +230,5 @@ const Search = () => {
         </Container>
     ) : <Redirect to='/auth' />;
 }
- 
+
 export default Search;
