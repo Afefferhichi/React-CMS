@@ -1,7 +1,7 @@
 import constants from "../config/constants";
 import {isBrowser} from "./Misc";
 
-const timeout = 5000;
+const timeout = 10000;
 
 let fetch2;
 let fs;

@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {MainContext} from '../../contexts/MainContext';
 import Logo from '../../assets/logo.png';
+import View from '../../assets/view.png';
 import {makeStyles} from '@material-ui/core/styles';
 import {Redirect, useHistory} from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme => ({
   },
   vision: {
     height: '300px',
-    padding: '1rem',
+    padding: '3rem',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -116,7 +117,7 @@ const Landing = () => {
       <div id='vision' className={classes.vision}>
         <Typography variant='h4' style={{textAlign: 'center'}}>To be the most trusted and innovative <br/> trading
           platform in MENA</Typography>
-        <img src='http://www.3almadmoon.info/images/Vision_1.svg' alt='vision' style={{marginTop: '2rem'}}/>
+        <img src= {View} alt='vision' style={{marginTop: '0.2rem'}}/>
       </div>
       <div id='services' className={classes.services}>
         <Typography variant='h4'>Our Services</Typography>
