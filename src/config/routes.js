@@ -2,17 +2,22 @@
 import Landing from "../modules/Home/Landing";
 import Auth from "../modules/Auth";
 import Home from "../modules/Home";
-import Settings from "../modules/Settings";
-import TemplatesList from "../modules/Templates/UserTemplatesList";
-import Search from "../modules/Admin/Search";
-import ShowPost from "../modules/Posts/ShowPost";
+import Settings from "../modules/User/Settings";
+import TemplatesList from "../modules/User/Templates/List";
+import WebPagesList from "../modules/User/WebPages/List";
+import WebPagesEdit from "../modules/User/WebPages/Edit";
+import WebPagesNew from "../modules/User/WebPages/New";
+import WebPagesShow from "../modules/User/WebPages/Show";
+
+import Search from "../modules/Search";
+import ShowPost from "../modules/User/Posts/ShowPost";
 
 // For admin users
-import AdminUsersList from "../modules/Admin/Users/AdminUsersList";
+import AdminUsersList from "../modules/Admin/Users/List";
 import ManagePosts from "../modules/Admin/Posts/ManagePosts";
-import AdminTemplatesList from "../modules/Admin/Templates/AdminTemplatesList";
-import AdminTemplatesNew from "../modules/Admin/Templates/AdminTemplatesNew";
-import AdminTemplatesEdit from "../modules/Admin/Templates/AdminTemplatesEdit";
+import AdminTemplatesList from "../modules/Admin/Templates/List";
+import AdminTemplatesNew from "../modules/Admin/Templates/New";
+import AdminTemplatesEdit from "../modules/Admin/Templates/Edit";
 
 
 const routes = [
@@ -22,7 +27,10 @@ const routes = [
   {path: '/home', component: Home},
   {path: '/settings', component: Settings},
   {path: '/templates', component: TemplatesList},
-  {path: '/templates/:id', component: TemplatesList},
+  {path: '/webpages', component: WebPagesList, exact: true},
+  {path: '/webpages/new', component: WebPagesNew},
+  {path: '/webpages/:id', component: WebPagesShow, exact: true},
+  {path: '/webpages/:id/edit', component: WebPagesEdit},
   {path: '/posts/:id', component: ShowPost},
   // For admin users
   // {path: '/admin/users', component: ManageUsers},

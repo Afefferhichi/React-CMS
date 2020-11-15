@@ -8,6 +8,9 @@
     "test": "cls && jest --runInBand",
     "test:apis:users": "cls && jest --testPathPattern=__tests__/apis/users",
     "test:apis:admin": "cls && jest --testPathPattern=__tests__/apis/admin",
+    "test:e2e": "cls && node ./__tests__/e2e/index.js",
+    "test:e2e:user-login": "cls && testcafe chrome ./__tests__/e2e/user/login.js -s takeOnFails=true",
+    "test:e2e:user-template": "cls && testcafe chrome ./__tests__/e2e/user/template.jso -s takeOnFails=true",
     "_test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "postinstall": "link-module-alias",
@@ -59,6 +62,7 @@
     "form-data": "^3.0.0",
     "https": "^1.0.0",
     "node-fetch": "^2.6.1",
+    "testcafe": "^1.9.4",
     "yarn": "^1.22.10"
   }
 }

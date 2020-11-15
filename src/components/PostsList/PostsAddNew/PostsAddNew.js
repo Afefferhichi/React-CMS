@@ -19,7 +19,7 @@ const PostAddNew = props => {
   return (
     <>
       <Button
-        fullWidth variant='outlined' color='primary' className={classes.add}
+        variant='outlined' color='primary' className={classes.add}
         onClick={handleClickOpen}>Add Post</Button>
       {/*<PostForm onSave={addPostHandler}/>*/}
     </>

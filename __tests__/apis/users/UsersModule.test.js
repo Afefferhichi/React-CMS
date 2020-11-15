@@ -1,10 +1,10 @@
 const CallServer = require("../../../src/utils/CallServer").default;
 const TokenManager = require("../../../src/utils/TokenManager").default;
 
-const DEMO_USER_DATA = require('../../demo_data/user_data2.json');
+const DEMO_USER_DATA = require('../demo_data/user_data2.json');
 
-const {adminLogin} = require("../../helpers/admin");
-const {userLogin} = require("../../helpers/user");
+const {adminLogin} = require("../helpers/admin");
+const {userLogin} = require("../helpers/user");
 
 let testIndex = 0;
 

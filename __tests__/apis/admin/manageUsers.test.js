@@ -1,10 +1,10 @@
 import CallServer from "../../../src/utils/CallServer";
 import TokenManager from "../../../src/utils/TokenManager";
-import {adminLogin} from "../../helpers/admin";
-import {userLogin} from "../../helpers/user";
+import {adminLogin} from "../helpers/admin";
+import {userLogin} from "../helpers/user";
 
 const newPassword = 'newPassword';
-const DEMO_USER_DATA = require('../../demo_data/user_data1.json');
+const DEMO_USER_DATA = require('../demo_data/user_data1.json');
 
 let oneTestUser = {};
 let allUsers = [];

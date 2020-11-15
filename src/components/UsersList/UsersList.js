@@ -85,11 +85,11 @@ const UsersList = props => {
               disabled: !rowData.enabled,
               onClick: setEnabledHandler
             }),
-            {
-              tooltip: 'Change password',
-              icon: VpnKeyIcon,
-              onClick: onPressChangePasswordHandler
-            },
+            // {
+            //   tooltip: 'Change password',
+            //   icon: VpnKeyIcon,
+            //   onClick: onPressChangePasswordHandler
+            // },
             {
               tooltip: 'Delete',
               icon: 'delete',

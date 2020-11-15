@@ -23,7 +23,7 @@ export default () => {
         <Toolbar>
           <DrawerMenu open={drawerOpen} client={client} logout={()=>logout(dispatch)}/>
           <TitleBar/>
-          {client.role === 'admin' && <SearchBar history={history}/>}
+          <SearchBar history={history}/>
           <NotificationBar/>
           <UserBar client={client} logout={()=>logout(dispatch)} setDrawerOpen={setDrawerOpen} history={history}/>
         </Toolbar>
