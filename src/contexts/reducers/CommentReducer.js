@@ -56,13 +56,19 @@ const CommentReducer = (state, {type, payload}) => {
         post: originalPost
       };
     case ADD_COMMENT:
+      console.log('case ADD_COMMENT:', state.posts);
       const originalPost2 = state.post;
       if (originalPost2 && originalPost2._id === payload.post_id)
         originalPost2.comments = originalPost2.comments.concat(payload.comment);
       return {
         ...state,
         posts: state.posts.map(post => {
-          if (post._id === payload.post_id) post.comments = post.comments.concat(payload.comment);
+          if (post._id === payload.post_id) {
+            const alreadyExisting = post.comments.some(comment => comment._id === payload.comment._id)
+            if (!alreadyExisting) {
+              post.comments = post.comments.concat(payload.comment);
+            }
+          }
           return post;
         }),
         post: originalPost2

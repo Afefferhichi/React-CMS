@@ -32,6 +32,9 @@ const MainContextProvider = ({children}) => {
   useEffect(() => {
     localStorage.setItem('clientInfo', (JSON.stringify(client)))
   }, [client]);
+  useEffect(() => {
+    localStorage.setItem('posts', (JSON.stringify(posts)))
+  }, [posts]);
 
   const domRef = createRef();
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import {Avatar, Card, Container, Grid, makeStyles, Typography} from "project-elements";
+import {Avatar, Card, Grid, makeStyles, Typography} from "project-elements";
 import {Link} from 'react-router-dom';
 import constants from "../../config/constants";
 
@@ -15,10 +15,11 @@ const WebPageItem = (props) => {
   const {webpage} = props;
   return (
     <Card className={classes.container}>
-      <Grid container  spacing={1}>
-        <Grid item xs={1} >
+      <Grid container spacing={1}>
+        <Grid item xs={1}>
           <Avatar>
             <img
+              alt={' '}
               src={constants.API_SERVER + 'attachments/' + webpage.author.photo}
             />
           </Avatar>

@@ -20,33 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/synchronize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PostsList/PostSync/PostSync.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/PostsList/PostSync/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WebPagesList/WebPageItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WebPagesList/WebPagesList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WebPagesList/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/api_calls/posts/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/posts/create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli/api_calls/webpages/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/webpages/create.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CustomHTMLEditor/CustomHTMLEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomHTMLEditor/CustomHTMLEditor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WebPageBox/WebPageBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebPageBox/WebPageBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WebPageEditorForm/WebPageEditorForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebPageEditorForm/WebPageEditorForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/actions/PostActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/PostActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Search/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/User/Home/UserHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Home/UserHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/User/WebPages/Edit/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Edit/Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/User/WebPages/New/New.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/WebPages/New/New.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigator/NavBar/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigator/NavBar/SearchBar/SearchBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/CallServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CallServer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Misc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Misc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebPagesList/WebPageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebPagesList/WebPageItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/MainContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/MainContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/CommentReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/CommentReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +106,7 @@
       <workItem from="1605501794501" duration="845000" />
       <workItem from="1605532339527" duration="7440000" />
       <workItem from="1605543272942" duration="2000" />
-      <workItem from="1605543806535" duration="11040000" />
+      <workItem from="1605543806535" duration="12668000" />
     </task>
     <servers />
   </component>
