@@ -36,11 +36,18 @@ const delay_ms = (ms) => new Promise((resolve, eject) => {
   }, ms);
 });
 
+const getBodyHTML = (html = "") => {
+  const ret = html.match(/<body[^>]*>[\s\S]+<\/body>/gi);
+  if (ret) return ret[0];
+  return '';
+};
+
 export {
   nl2br,
   br2nl,
   capitalize,
   makeAttachFormData,
   isBrowser,
-  delay_ms
+  delay_ms,
+  getBodyHTML
 }

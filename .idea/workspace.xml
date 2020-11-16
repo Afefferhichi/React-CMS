@@ -20,9 +20,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cli/api_calls/posts/synchronize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostsList/PostSync/PostSync.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/PostsList/PostSync/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPagesList/WebPageItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPagesList/WebPagesList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WebPagesList/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cli/api_calls/posts/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/posts/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/api_calls/webpages/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/cli/api_calls/webpages/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CustomHTMLEditor/CustomHTMLEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomHTMLEditor/CustomHTMLEditor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsAddNew/PostsAddNew.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UsersList/UsersList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebPageBox/WebPageBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebPageBox/WebPageBox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebPageEditorForm/WebPageEditorForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebPageEditorForm/WebPageEditorForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/actions/PostActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/PostActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Search/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Search/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/User/Home/UserHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/Home/UserHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/User/WebPages/Edit/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Edit/Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/User/WebPages/New/New.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/WebPages/New/New.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigator/NavBar/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigator/NavBar/SearchBar/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/CallServer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/CallServer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/Misc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Misc.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tokens.json" beforeDir="false" afterPath="$PROJECT_DIR$/tokens.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,26 +68,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.19.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.68" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modules/User/WebPages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cli/api_calls/posts" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Users\CTO\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\202.7660.23\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\contribute\3almadmoun\front-end\src\modules\User\WebPages" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\components" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\reducers" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\actions" />
-      <recent name="D:\contribute\3almadmoun\front-end\__tests__\demo_data" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\contribute\3almadmoun\front-end\src\modules" />
       <recent name="D:\contribute\3almadmoun\front-end\src\modules\User" />
       <recent name="D:\contribute\3almadmoun\front-end\src\modules\Admin" />
       <recent name="D:\contribute\3almadmoun\front-end\__tests__\apis" />
       <recent name="D:\contribute\3almadmoun\front-end\__tests__\ui\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\contribute\3almadmoun\front-end\cli\api_calls\posts" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\modules\User\WebPages" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\components" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\reducers" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\actions" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -101,7 +124,11 @@
       <workItem from="1605078232775" duration="2945000" />
       <workItem from="1605205236583" duration="1291000" />
       <workItem from="1605238949657" duration="26123000" />
-      <workItem from="1605472876208" duration="2191000" />
+      <workItem from="1605472876208" duration="2921000" />
+      <workItem from="1605501794501" duration="845000" />
+      <workItem from="1605532339527" duration="7440000" />
+      <workItem from="1605543272942" duration="2000" />
+      <workItem from="1605543806535" duration="11040000" />
     </task>
     <servers />
   </component>
@@ -143,21 +170,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="475" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1603137380680" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1605544247653">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1605544247653" />
     <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603441045083">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1603441045083" />
-    <state x="232" y="54" width="1102" height="641" key="find.popup" timestamp="1605282981002">
+    <state x="232" y="54" width="1102" height="641" key="find.popup" timestamp="1605560347244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="232" y="54" width="1102" height="641" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605282981002" />
+    <state x="232" y="54" width="1102" height="641" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605560347244" />
     <state x="615" y="190" key="run.anything.popup" timestamp="1605280022244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="615" y="190" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605280022244" />
-    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1603482383045">
+    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605555195073">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1603482383045" />
+    <state x="630" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605555195073" />
   </component>
 </project>

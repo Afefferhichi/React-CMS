@@ -1,5 +1,4 @@
 import React, {useContext, useEffect, useState} from "react";
-import {Redirect} from "react-router-dom";
 
 import {MainContext} from "../../../../contexts/MainContext";
 import CallServer from "../../../../utils/CallServer";
@@ -33,17 +32,13 @@ const Edit = props => {
 
   useEffect(componentDidMount, []);
 
-  return (
-    <>
-      {
-        client && (client.role === 'admin' || client.role === 'user') ? (
-          <>
-            {webpage && <WebPageEditorForm webpage={webpage} onSaveWebPage={onSaveWebPage}/>}
-          </>
-        ) : <Redirect to='/auth'/>
-      }
-    </>
-  );
+  if (!client || !webpage) {
+    return null;
+  } else {
+    return (
+      <WebPageEditorForm webpage={webpage} onSaveWebPage={onSaveWebPage}/>
+    );
+  }
 }
 
 export default Edit;

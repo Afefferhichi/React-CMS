@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from "react";
-import {Container} from 'project-elements'
+import {Container, Typography} from 'project-elements'
 import CallServer from "../../../../utils/CallServer";
 import PostAddNew from "../../../../components/PostsList/PostsAddNew";
 import PostsList from "../../../../components/PostsList";
+import {getBodyHTML} from "../../../../utils/Misc";
 
 const Show = props => {
   const webpage_id = props.match.params.id;
@@ -23,17 +24,23 @@ const Show = props => {
   };
 
   useEffect(componentDidMount, []);
-
-  return (
-    <Container>
-      <PostAddNew/>
-      <div dangerouslySetInnerHTML={{__html: (webpage && webpage.html)}}/>
-      <p>&nbsp;</p>
+  if (!webpage) {
+    return (
       <Container>
-        <PostsList/>
+        No such a web page
       </Container>
-    </Container>
-  );
+    );
+  } else {
+    return (
+      <Container>
+        <Typography variant={'h5'}>&nbsp;{webpage.name}</Typography>
+        <br />
+        <PostAddNew webpage_id={webpage_id}/>
+        <div dangerouslySetInnerHTML={{__html: getBodyHTML(webpage.html)}}/>
+        <PostsList webpage_id={webpage_id}/>
+      </Container>
+    );
+  }
 }
 
 export default Show;

@@ -15,7 +15,7 @@ import {nl2br} from "../../utils/Misc";
 import {MainContext} from "../../contexts/MainContext";
 
 const WebPageBox = props => {
-  const {_id, description} = props.webpage;
+  const {_id, name} = props.webpage;
   const {deleteWebPage, dispatch} = useContext(MainContext);
   const history = useHistory();
 
@@ -24,6 +24,7 @@ const WebPageBox = props => {
   }
 
   const pressDeleteHandler = () => {
+    if(!window.confirm('Are you sure to delete this webpage?')) return;
     deleteWebPage(_id, dispatch);
   }
 
@@ -35,7 +36,7 @@ const WebPageBox = props => {
     <Card>
       <CardContent>
         <Divider/>
-        <Paper outline={1} style={{padding: 10}} dangerouslySetInnerHTML={{__html: nl2br(description || '')}}/>
+        <Paper outline={1} style={{padding: 10}} dangerouslySetInnerHTML={{__html: nl2br(name || '')}}/>
       </CardContent>
       <CardActions>
         <IconButton onClick={pressEditHandler}>

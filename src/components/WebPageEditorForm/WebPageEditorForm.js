@@ -12,17 +12,17 @@ const WebPageEditorForm = props => {
   const classes = useWebPageEditorStyles();
   const form = useFormik({
     initialValues: {
-      description: webpage.description,
+      name: webpage.name,
     },
     validationSchema: Yup.object().shape({
-      description: Yup.string().required('Description is required'),
+      name: Yup.string().required('name is required'),
     }),
     onSubmit: async (form, {setFieldError}) => {
       try {
-        const {description} = form;
+        const {name} = form;
         const {getWebPageData} = G_Object;
         const webpageData = getWebPageData && (await getWebPageData());
-        onSaveWebPage && onSaveWebPage({...webpageData, description})
+        onSaveWebPage && onSaveWebPage({...webpageData, name})
       } catch (err) {
         setFieldError('form', err.message);
       }
@@ -43,12 +43,12 @@ const WebPageEditorForm = props => {
           required
           fullWidth
           multiline={true}
-          id="description"
-          label="Description"
-          name="description"
-          value={form.values.description}
-          error={form.errors.description && form.touched.description}
-          helperText={form.errors.description && form.errors.description}
+          id="name"
+          label="Name"
+          name="name"
+          value={form.values.name}
+          error={form.errors.name && form.touched.name}
+          helperText={form.errors.name && form.errors.name}
           onChange={form.handleChange}
           onBlur={form.handleBlur}
           autoComplete={'off'}

@@ -21,7 +21,7 @@ const SearchBar = props => {
         onKeyPress={event => {
           if (event.key === 'Enter')
             if (event.target.value.trim().length > 0) {
-              history.push(`/admin/search/${event.target.value}`);
+              history.push(`/search/${event.target.value}`);
               event.target.value = '';
             }
         }}

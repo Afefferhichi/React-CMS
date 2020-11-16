@@ -39,7 +39,7 @@ const routes = [
   {path: '/admin/templates/new', component: AdminTemplatesNew},
   {path: '/admin/templates/:id/edit', component: AdminTemplatesEdit},
   {path: '/admin/templates', component: AdminTemplatesList},
-  {path: '/admin/search/:query', component: Search},
+  {path: '/search/:query', component: Search, exact: false},
 ];
 
 export default routes;

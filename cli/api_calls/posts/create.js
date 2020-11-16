@@ -14,6 +14,6 @@ testData2.append('attachments', fs.createReadStream('./public/index.html'))
 // module.exports = () => CallServer.postWithFile('posts', testData2);
 
 module.exports = [
-  CallServer => () => CallServer.postWithFile('posts', testData2),
+  CallServer => (arguments) => CallServer.postWithFile('webpages/' + arguments[0] + '/posts', testData2),
   result => result
 ];

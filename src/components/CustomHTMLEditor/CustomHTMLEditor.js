@@ -15,7 +15,9 @@ const CustomHTMLEditor = props => {
   const onLoad = () => {
     if (htmlData) {
       setTimeout(()=> {
-        emailEditorRef.current && emailEditorRef.current.editor.loadDesign(JSON.parse(htmlData.design));
+        if(htmlData.design) {
+          emailEditorRef.current && emailEditorRef.current.editor.loadDesign(JSON.parse(htmlData.design));
+        }
       }, 300)
     }
     getHTMLData && getHTMLData(exportHTMLData);

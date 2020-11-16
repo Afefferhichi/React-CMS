@@ -1,9 +1,8 @@
 import React, {useContext, useEffect, useRef} from "react";
-import {MaterialTable, VpnKeyIcon} from 'project-elements';
+import {MaterialTable} from 'project-elements';
 import {makeStyles} from "@material-ui/core/styles";
 import {MainContext} from "../../contexts/MainContext";
 import UserForm from "./UserForm";
-import PasswordChangeForm from "./PasswordChangeForm";
 import CallServer from "../../utils/CallServer";
 
 const useStyles = makeStyles({
@@ -26,13 +25,13 @@ const UsersList = props => {
     openSnackBar({message: 'Successfully ' + enableMethod + 'd', severity: 'success'}, dispatch);
     getUsers(dispatch);
   }
-
-  const onPressChangePasswordHandler = (event, user) => {
-    openDialog({
-      title: 'Change password',
-      contentComponent: <PasswordChangeForm user={user} refresh={+new Date()}/>
-    }, dispatch);
-  }
+  //
+  // const onPressChangePasswordHandler = (event, user) => {
+  //   openDialog({
+  //     title: 'Change password',
+  //     contentComponent: <PasswordChangeForm user={user} refresh={+new Date()}/>
+  //   }, dispatch);
+  // }
 
   const onPressDeleteHandler = async (event, {_id}) => {
     try {

@@ -2,14 +2,16 @@ import React, {useContext, useEffect, useState} from "react";
 import PostItem from "./PostItem";
 import {MainContext} from "../../contexts/MainContext";
 import {Button, CircularProgress, Grid, Paper, Typography} from "../../themes/mui/Elements";
+import PostSync from "./PostSync/PostSync";
 
-const PostsList = () => {
+const PostsList = (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [refresh, setRefresh] = useState(0);
-  const {posts, loadPosts, dispatch} = useContext(MainContext);
+  const {client, posts, loadPosts} = useContext(MainContext);
+  const {webpage_id} = props;
   const loadData = () => {
-    loadPosts(dispatch).then(() => {
+    loadPosts(webpage_id).then(() => {
       setLoading(false);
     }).catch(error => {
       setError({message: 'Error on loading posts.'});
@@ -28,6 +30,7 @@ const PostsList = () => {
 
   return (
     <>
+      {client && client.role === 'admin' && <PostSync/>}
       {loading
         ? (
           <Grid container justify={'center'}>
