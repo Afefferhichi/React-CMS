@@ -8,7 +8,7 @@ import {
   Divider,
   EditIcon,
   IconButton,
-  Paper,
+  Typography,
   VisibilityIcon,
 } from 'project-elements';
 import {nl2br} from "../../utils/Misc";
@@ -24,11 +24,11 @@ const WebPageBox = props => {
   }
 
   const pressDeleteHandler = async () => {
-    if(!window.confirm('Are you sure to delete this webpage?')) return;
+    if (!window.confirm('Are you sure to delete this webpage?')) return;
     try {
       await deleteWebPage(_id);
     } catch (deleteError) {
-      if(deleteError.error_code === 'ACCESS_DENIED') {
+      if (deleteError.error_code === 'ACCESS_DENIED') {
         openSnackBar({message: "You can't delete this webpage", severity: 'error'});
       }
     }
@@ -41,9 +41,11 @@ const WebPageBox = props => {
   return (
     <Card>
       <CardContent>
-        <Divider/>
-        <Paper outline={1} style={{padding: 10}} dangerouslySetInnerHTML={{__html: nl2br(name || '')}}/>
+        <Typography variant={'h6'} elevation={0} style={{padding: 0}}
+                    dangerouslySetInnerHTML={{__html: nl2br(name || '')}}
+        />
       </CardContent>
+      <Divider style={{marginLeft: 10, marginRight: 10,}}/>
       <CardActions>
         <IconButton onClick={pressEditHandler}>
           <EditIcon/>

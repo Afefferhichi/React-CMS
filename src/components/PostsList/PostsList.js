@@ -68,17 +68,17 @@ const PostsList = (props) => {
             posts && posts.length > 0 && posts.map((post, index) => {
               let needsToShowWebPageTitle = false;
               let webpage = null;
-              if (listType === 'byWebPage' && webpage_ids.indexOf(post.webpage) === -1) {
+              let existingIndex;
+              if (listType === 'inHome' && webpage_ids.indexOf(post.webpage) === -1) {
                 webpage_ids.push(post.webpage);
                 needsToShowWebPageTitle = true;
-                const existingIndex = webpages.findIndex(webpage => webpage._id)
+                existingIndex = webpages.findIndex(webpage => webpage._id === post.webpage)
                 if (existingIndex > -1) {
-                  webpage = webpages[existingIndex]._id;
+                  webpage = webpages[existingIndex];
                 }
               }
               return (
                 <>
-                  {JSON.stringify(webpages.map(webpage=>webpage._id))}
                   {needsToShowWebPageTitle && webpage && <WebPageTitle name={webpage.name}/>}
                   <PostItem key={String(index)} post={post}/>
                 </>

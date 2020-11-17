@@ -10,7 +10,7 @@ const SnackBar = props => {
   const {snackbar = {}, closeSnackBar, dispatch} = useContext(MainContext);
   const snackbarRef = createRef();
 
-  const {message = '', severity = 'success', opened = false, duration = 5000} = snackbar;
+  const {message = '', severity = 'success', opened = false, duration = 2000} = snackbar;
 
   return (
     <Snackbar

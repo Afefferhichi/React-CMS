@@ -1,11 +1,12 @@
 import React from "react";
+import {Typography} from "project-elements";
 
 const WebPageTitle = (props) => {
   const {name} = props;
   return (
-    <div>
+    <Typography variant={'h5'}>
       {name}
-    </div>
+    </Typography>
   );
 };
 

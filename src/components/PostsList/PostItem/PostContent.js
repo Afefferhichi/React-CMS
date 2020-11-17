@@ -38,7 +38,7 @@ const PostContent = props => {
 
   return (
     <>
-      <Grid container>
+      <Grid container style={{paddingLeft: 10, paddingTop: 10,}}>
         <Grid item xs={8}>
           <Grid container className={classes.grid} spacing={0} alignItems='center'>
             {hasPostIdInUrl && (

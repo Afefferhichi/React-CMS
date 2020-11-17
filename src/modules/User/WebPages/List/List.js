@@ -16,7 +16,7 @@ const WebPagesList = () => {
   return client && client.role === 'user' ? (
     <Container>
       <Grid container className={classes.grid} spacing={3} justify='flex-start' alignItems='flex-start'>
-        {webpages.map((webpage, index) => (
+        {webpages && webpages.map((webpage, index) => (
           <Grid key={String(index)} item xs={12} md={6}>
             <WebPageBox webpage={webpage}/>
           </Grid>
