@@ -26,7 +26,7 @@ import WebPageReducer, {
   ADD_WEBPAGE,
   DELETE_WEBPAGE,
   DISABLE_WEBPAGE,
-  ENABLE_WEBPAGE, LOAD_WEBPAGES,
+  ENABLE_WEBPAGE, FOLLOW_WEBPAGE, LOAD_WEBPAGE, LOAD_WEBPAGES, UNFOLLOW_WEBPAGE,
   UPDATE_WEBPAGE
 } from './WebPageReducer';
 import SnackbarReducer, {OPEN_CLOSE_SNACKBAR} from "./SnackbarReducer";
@@ -68,6 +68,9 @@ export default (state, {type, payload}) => {
       return TemplateReducer(state, {type, payload});
     case ADD_WEBPAGE:
     case LOAD_WEBPAGES:
+    case LOAD_WEBPAGE:
+    case FOLLOW_WEBPAGE:
+    case UNFOLLOW_WEBPAGE:
     case ENABLE_WEBPAGE:
     case DISABLE_WEBPAGE:
     case UPDATE_WEBPAGE:

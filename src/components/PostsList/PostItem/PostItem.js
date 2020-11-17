@@ -22,24 +22,14 @@ const PostItem = props => {
         <Grid container className={classes.grid} spacing={2} alignItems='center'>
           <PostContent post={post}/>
           {comments && comments.length > 0 && (
-            <>
-              <Grid item xs={12}>
-                <Divider/>
-              </Grid>
-              <CommentsList comments={comments} post_id={post._id}/>
-            </>
+            <CommentsList comments={comments} post_id={post._id}/>
           )}
           {(isAuthor || isReader) && (
-            <>
-              <Grid item xs={12}>
-                <Divider/>
-              </Grid>
-              <Grid item xs={12}>
-                <div className={classes.margin}>
-                  <CommentsAddNew post_id={post._id}/>
-                </div>
-              </Grid>
-            </>
+            <Grid item xs={12}>
+              <div className={classes.margin}>
+                <CommentsAddNew post_id={post._id}/>
+              </div>
+            </Grid>
           )}
         </Grid>
       </CardContent>

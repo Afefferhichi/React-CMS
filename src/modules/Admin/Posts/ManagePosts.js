@@ -5,7 +5,7 @@ import PostsList from "../../../components/PostsList";
 export default () => {
   return (
     <Container maxWidth='md'>
-      <PostsList/>
+      <PostsList listType={'byAdmin'}/>
     </Container>
   );
 }

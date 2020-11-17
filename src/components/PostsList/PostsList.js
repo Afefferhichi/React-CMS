@@ -3,24 +3,42 @@ import PostItem from "./PostItem";
 import {MainContext} from "../../contexts/MainContext";
 import {Button, CircularProgress, Grid, Paper, Typography} from "../../themes/mui/Elements";
 import PostSync from "./PostSync/PostSync";
+import WebPageTitle from "./WebPageTitle";
 
 const PostsList = (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [refresh, setRefresh] = useState(0);
-  const {client, posts, loadPosts} = useContext(MainContext);
-  const {webpage_id} = props;
-  const loadData = () => {
-    loadPosts(webpage_id).then(() => {
+  const {client, posts, webpages, loadPostsByCondition, loadPostsInHome} = useContext(MainContext);
+  const {listType, webpage_id} = props;
+
+  const loadData = (loaderFn) => {
+    loaderFn.then(() => {
       setLoading(false);
     }).catch(error => {
       setError({message: 'Error on loading posts.'});
       setLoading(false);
     });
-  };
+  }
+
   const componentDidMount = () => {
-    loadData();
+    let loaderFn;
+    switch (listType) {
+      case 'byWebPage':
+        loaderFn = loadPostsByCondition({webpage: webpage_id});
+        break;
+      case 'byAdmin':
+        loaderFn = loadPostsByCondition({});
+        break;
+      case 'inHome':
+        loaderFn = loadPostsInHome();
+        break;
+      default:
+        loaderFn = loadPostsByCondition({});
+    }
+    loadData(loaderFn);
   };
+
   const refreshButtonPressHandler = () => {
     setError(null);
     setLoading(true);
@@ -28,6 +46,7 @@ const PostsList = (props) => {
   };
   useEffect(componentDidMount, [refresh]);
 
+  const webpage_ids = [];
   return (
     <>
       {client && client.role === 'admin' && <PostSync/>}
@@ -46,9 +65,25 @@ const PostsList = (props) => {
             </Grid>
           )
           : (
-            posts && posts.length > 0 && posts.map((post, index) => (
-              <PostItem key={String(index)} post={post}/>
-            ))
+            posts && posts.length > 0 && posts.map((post, index) => {
+              let needsToShowWebPageTitle = false;
+              let webpage = null;
+              if (listType === 'byWebPage' && webpage_ids.indexOf(post.webpage) === -1) {
+                webpage_ids.push(post.webpage);
+                needsToShowWebPageTitle = true;
+                const existingIndex = webpages.findIndex(webpage => webpage._id)
+                if (existingIndex > -1) {
+                  webpage = webpages[existingIndex]._id;
+                }
+              }
+              return (
+                <>
+                  {JSON.stringify(webpages.map(webpage=>webpage._id))}
+                  {needsToShowWebPageTitle && webpage && <WebPageTitle name={webpage.name}/>}
+                  <PostItem key={String(index)} post={post}/>
+                </>
+              );
+            })
           )
       }
     </>

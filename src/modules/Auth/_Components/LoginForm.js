@@ -52,7 +52,7 @@ const LoginForm = () => {
         openSnackBar({message: 'Successfully logged in!', severity: 'success'}, dispatch);
         history.push('/home');
       } catch (err) {
-        openSnackBar({message: err.message, severity: 'error', duration: 100000}, dispatch);
+        openSnackBar({message: err.message, severity: 'error'}, dispatch);
       }
     }
   });

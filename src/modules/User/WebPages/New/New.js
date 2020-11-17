@@ -8,7 +8,7 @@ import CallServer from "../../../../utils/CallServer";
 
 
 const WebPagesNew = props => {
-  const {addWebPage, dispatch} = useContext(MainContext);
+  const {addWebPage} = useContext(MainContext);
   const [webpage, setWebPage] = useState(null);
   const template_id = (() => {
     try {
@@ -21,7 +21,7 @@ const WebPagesNew = props => {
   const history = useHistory();
   const onSaveWebPage = async webpageData => {
     // console.log('webpageContent', webpageContent);
-    await addWebPage(webpageData, dispatch);
+    await addWebPage(webpageData);
     history.replace('/webpages')
   }
 

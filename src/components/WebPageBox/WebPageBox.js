@@ -16,16 +16,22 @@ import {MainContext} from "../../contexts/MainContext";
 
 const WebPageBox = props => {
   const {_id, name} = props.webpage;
-  const {deleteWebPage, dispatch} = useContext(MainContext);
+  const {deleteWebPage, openSnackBar} = useContext(MainContext);
   const history = useHistory();
 
   const pressEditHandler = () => {
     history.push('/webpages/' + _id + '/edit')
   }
 
-  const pressDeleteHandler = () => {
+  const pressDeleteHandler = async () => {
     if(!window.confirm('Are you sure to delete this webpage?')) return;
-    deleteWebPage(_id, dispatch);
+    try {
+      await deleteWebPage(_id);
+    } catch (deleteError) {
+      if(deleteError.error_code === 'ACCESS_DENIED') {
+        openSnackBar({message: "You can't delete this webpage", severity: 'error'});
+      }
+    }
   }
 
   const pressShowHandler = () => {

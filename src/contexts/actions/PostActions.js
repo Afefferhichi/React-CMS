@@ -10,12 +10,30 @@ import {
 import CallServer from '../../utils/CallServer';
 import {dispatch2} from "../MainContext";
 
-const loadPosts = async (webpage_id) => {
+const loadPostsByCondition = async (conditions) => {
   try {
-    const request = await CallServer.get('posts?webpage=' + webpage_id);
+    let query = '';
+    for (let key in conditions) {
+      query += `&${key}=${conditions[key]}`;
+    }
+    const request = await CallServer.get('posts?' + query);
     if (request.success) {
       const {posts} = request;
       await dispatch2({type: LOAD_POST, payload: {posts}});
+    } else {
+      throw request;
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
+const loadPostsInHome = async () => {
+  try {
+    const request = await CallServer.get('posts/listInHome');
+    if (request.success) {
+      const {posts, webpages} = request;
+      await dispatch2({type: LOAD_POST, payload: {posts, webpages}});
     } else {
       throw request;
     }
@@ -109,11 +127,12 @@ const setVisiblePost = async (post_id, visibleMethod) => {
 };
 
 export default {
-  loadPosts,
+  loadPostsByCondition,
+  loadPostsInHome,
   deletePost,
   addPost,
   updatePost,
   likePost,
   getPost,
-  setVisiblePost
+  setVisiblePost,
 };

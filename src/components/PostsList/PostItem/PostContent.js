@@ -76,7 +76,7 @@ const PostContent = props => {
                   </Typography>
                 )}
               {(
-                visible ? '' : <span style={{color: 'gray'}}>(hidden by admin)</span>
+                visible ? '' : <span style={{color: 'gray'}}>(not approved)</span>
               )}
             </Grid>
           </Grid>

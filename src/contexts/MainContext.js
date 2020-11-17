@@ -15,7 +15,7 @@ export let dispatch2 = {};
 const MainContextProvider = ({children}) => {
   const clientInfo = (JSON.parse(localStorage.getItem('clientInfo')));
 
-  const [{client, users, posts, post, templates, webpages, snackbar, dialog2}, dispatch] =
+  const [{client, users, posts, post, templates, webpages, webpage, snackbar, dialog2}, dispatch] =
     useReducer(MainReducer, {
       client: clientInfo,
       users: [],
@@ -23,6 +23,7 @@ const MainContextProvider = ({children}) => {
       post: null,
       templates: [],
       webpages: [],
+      webpage: null,
       snackbar: {},
       dialog2: null,
     });
@@ -32,9 +33,6 @@ const MainContextProvider = ({children}) => {
   useEffect(() => {
     localStorage.setItem('clientInfo', (JSON.stringify(client)))
   }, [client]);
-  useEffect(() => {
-    localStorage.setItem('posts', (JSON.stringify(posts)))
-  }, [posts]);
 
   const domRef = createRef();
   return (
@@ -48,6 +46,7 @@ const MainContextProvider = ({children}) => {
         post,
         templates,
         webpages,
+        webpage,
         snackbar,
         dialog2,
         ...UserActions,

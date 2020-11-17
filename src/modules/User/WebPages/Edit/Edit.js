@@ -6,12 +6,12 @@ import WebPageEditorForm from "../../../../components/WebPageEditorForm";
 
 const Edit = props => {
   const webpage_id = props.match.params.id;
-  const {client, updateWebPage, dispatch} = useContext(MainContext);
+  const {client, updateWebPage} = useContext(MainContext);
   const [webpage, setWebPage] = useState(null);
 
   const onSaveWebPage = async (webpageData) => {
     if (webpage_id) {
-      await updateWebPage({id: webpage_id, webpageData}, dispatch);
+      await updateWebPage({id: webpage_id, webpageData});
     }
     window.history.back();
   }

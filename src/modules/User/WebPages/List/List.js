@@ -8,11 +8,9 @@ import useWebPagesListStyles from './List.style';
 
 const WebPagesList = () => {
   const classes = useWebPagesListStyles();
-  const {client, webpages, loadWebPages, dispatch} = useContext(MainContext);
+  const {client, webpages, loadWebPages} = useContext(MainContext);
   const componentDidMount = () => {
-    if (webpages.length === 0) {
-      loadWebPages(dispatch);
-    }
+    loadWebPages();
   };
   useEffect(componentDidMount, []);
   return client && client.role === 'user' ? (

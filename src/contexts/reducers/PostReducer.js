@@ -11,7 +11,8 @@ const PostReducer = (state, {type, payload}) => {
     case LOAD_POST:
       return {
         ...state,
-        posts: payload.posts
+        posts: payload.posts,
+        webpages: payload.webpages,
       };
     case DELETE_POST:
       return {
@@ -44,7 +45,7 @@ const PostReducer = (state, {type, payload}) => {
         return post;
       });
       const originalPost = state.post;
-      if(state.post && state.post._id === payload.post_id) {
+      if (state.post && state.post._id === payload.post_id) {
         originalPost.pstLikes = payload.pstLikes;
         originalPost.pstDislikes = payload.pstDislikes;
       }
@@ -67,7 +68,7 @@ const PostReducer = (state, {type, payload}) => {
         return post;
       });
       const originalPost3 = state.post;
-      if(state.post && state.post._id === payload._id) {
+      if (state.post && state.post._id === payload._id) {
         originalPost3.visible = payload.visible;
       }
       return {
