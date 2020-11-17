@@ -12,7 +12,8 @@ const useStyles = makeStyles(theme => ({
 
 const WebPageItem = (props) => {
   const classes = useStyles();
-  const {webpage} = props;
+  const {webpage = {}} = props;
+  webpage.author = webpage.author || {};
   return (
     <Card className={classes.container}>
       <Grid container spacing={1}>
