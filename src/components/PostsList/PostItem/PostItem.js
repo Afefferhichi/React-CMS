@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import {Card, CardContent, Divider, Grid} from "project-elements";
+import {Card, CardContent, Grid} from "project-elements";
 import usePostItemStyle from './PostItem.style';
 import CommentsList from "../../CommentsList";
 import CommentsAddNew from "../../CommentsList/CommentsAddNew";
