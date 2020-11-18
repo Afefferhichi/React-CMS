@@ -78,10 +78,10 @@ const PostsList = (props) => {
                 }
               }
               return (
-                <>
+                <div key={String(index)}>
                   {needsToShowWebPageTitle && webpage && <WebPageTitle name={webpage.name}/>}
-                  <PostItem key={String(index)} post={post}/>
-                </>
+                  <PostItem post={post}/>
+                </div>
               );
             })
           )

@@ -38,7 +38,12 @@ const delay_ms = (ms) => new Promise((resolve, eject) => {
 
 const getBodyHTML = (html = "") => {
   const ret = html.match(/<body[^>]*>[\s\S]+<\/body>/gi);
-  if (ret) return ret[0];
+  if (ret) {
+    let bodyHTML = ret[0];
+    bodyHTML = bodyHTML.replace(/<body[^>]+>/gi, '');
+    bodyHTML = bodyHTML.replace(/<\/body>/gi, '');
+    return bodyHTML;
+  }
   return '';
 };
 
