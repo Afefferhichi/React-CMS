@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/__tests__/e2e/demo/google-translate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/User/WebPages/Show/Show.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Misc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Misc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Home/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +37,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\contribute\3almadmoun\front-end\cli\api_calls\posts" />
-      <recent name="D:\contribute\3almadmoun\front-end\cli\api_calls\webpages" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\modules\User\WebPages" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\components" />
-      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\reducers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\contribute\3almadmoun\front-end\src\modules" />
       <recent name="D:\contribute\3almadmoun\front-end\src\modules\User" />
       <recent name="D:\contribute\3almadmoun\front-end\src\modules\Admin" />
       <recent name="D:\contribute\3almadmoun\front-end\__tests__\apis" />
       <recent name="D:\contribute\3almadmoun\front-end\__tests__\ui\admin" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\contribute\3almadmoun\front-end\cli\api_calls\posts" />
+      <recent name="D:\contribute\3almadmoun\front-end\cli\api_calls\webpages" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\modules\User\WebPages" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\components" />
+      <recent name="D:\contribute\3almadmoun\front-end\src\contexts\reducers" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -107,6 +93,9 @@
       <workItem from="1605543806535" duration="14270000" />
       <workItem from="1605615808465" duration="9000" />
       <workItem from="1605615827127" duration="22051000" />
+      <workItem from="1605717975606" duration="506000" />
+      <workItem from="1605760790516" duration="2131000" />
+      <workItem from="1605795031880" duration="4493000" />
     </task>
     <servers />
   </component>
@@ -126,11 +115,41 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:D:/contribute/3almadmoun/front-end/src" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
