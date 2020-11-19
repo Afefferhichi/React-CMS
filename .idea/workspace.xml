@@ -6,9 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/__tests__/e2e/demo/google-translate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__tests__/e2e/demo/google-translate.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/e2e/demo/google-translate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +93,7 @@
       <workItem from="1605615827127" duration="22051000" />
       <workItem from="1605717975606" duration="506000" />
       <workItem from="1605760790516" duration="2131000" />
-      <workItem from="1605795031880" duration="4493000" />
+      <workItem from="1605795031880" duration="4650000" />
     </task>
     <servers />
   </component>
@@ -163,6 +161,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="716" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1603030400257" />
+    <state x="508" y="100" width="936" height="624" key="DiffContextDialog" timestamp="1605800202657">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="508" y="100" width="936" height="624" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1605800202657" />
     <state x="475" y="57" key="SettingsEditor" timestamp="1603137380680">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -171,10 +173,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1605544247653" />
-    <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1603441045083">
+    <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605800202657">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1603441045083" />
+    <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605800202657" />
     <state x="232" y="54" width="1102" height="641" key="find.popup" timestamp="1605636704560">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
