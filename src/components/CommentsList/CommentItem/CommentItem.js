@@ -41,6 +41,7 @@ const CommentItem = props => {
             )
           }
         </Avatar>
+        <span>{`${author.firstname} ${author.lastname}`}</span>
       </Grid>
       <Grid item xs={7} style={{paddingTop: 10,}}>
         <Typography>{cmtValue}</Typography>

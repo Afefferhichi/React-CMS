@@ -75,6 +75,7 @@ const PostContent = props => {
                     {pstTitle}
                   </Typography>
                 )}
+                <span>{`${author.firstname} ${author.lastname}`}</span>
               {(
                 visible ? '' : <span style={{color: 'gray'}}>(not approved)</span>
               )}
