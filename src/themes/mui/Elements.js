@@ -5,6 +5,7 @@ import {
   AppBar,
   Avatar,
   Badge,
+  Box,
   Button,
   Card,
   CardContent,
@@ -26,6 +27,8 @@ import {
   MenuItem,
   Paper,
   Snackbar,
+  Tabs,
+  Tab,
   TextField,
   Toolbar,
   Typography
@@ -93,7 +96,6 @@ export {
   TextField,
   Toolbar,
   Typography,
-
   ExpandMoreIcon,
   MaterialTable,
   MenuIcon,
@@ -122,4 +124,7 @@ export {
   ShareIcon,
   ArrowBack,
   VpnKeyIcon,
+  Tabs,
+  Tab,
+  Box,
 };

@@ -1,3 +1,5 @@
+import {InitialState} from "../MainContext";
+
 export const SIGN_UP = 'SIGN_UP';
 export const LOG_IN = 'LOG_IN';
 export const LOG_OUT = 'LOG_OUT';
@@ -15,7 +17,7 @@ const UserReducer = (state, {type, payload}) => {
     case GET_CLIENT_INFO:
       return {...state, client: payload};
     case LOG_OUT:
-      return {...state, client: null};
+      return InitialState;
     case GET_USERS:
       return {...state, users: payload};
     case ADD_USER:

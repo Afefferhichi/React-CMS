@@ -2,15 +2,14 @@ import React, {useContext, useEffect, useState} from "react";
 import PostItem from "./PostItem";
 import {MainContext} from "../../contexts/MainContext";
 import {Button, CircularProgress, Grid, Paper, Typography} from "../../themes/mui/Elements";
-import PostSync from "./PostSync/PostSync";
 import WebPageTitle from "./WebPageTitle";
 
 const PostsList = (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [refresh, setRefresh] = useState(0);
-  const {client, posts, webpages, loadPostsByCondition, loadPostsInHome} = useContext(MainContext);
-  const {listType, webpage_id} = props;
+  const {posts, webpages, loadPostsByCondition, loadPostsInHome} = useContext(MainContext);
+  const {listType, webpage_id, adminListCondition} = props;
 
   const loadData = (loaderFn) => {
     loaderFn.then(() => {
@@ -28,7 +27,7 @@ const PostsList = (props) => {
         loaderFn = loadPostsByCondition({webpage: webpage_id});
         break;
       case 'byAdmin':
-        loaderFn = loadPostsByCondition({});
+        loaderFn = loadPostsByCondition(adminListCondition);
         break;
       case 'inHome':
         loaderFn = loadPostsInHome();
@@ -49,7 +48,6 @@ const PostsList = (props) => {
   const webpage_ids = [];
   return (
     <>
-      {client && client.role === 'admin' && <PostSync/>}
       {loading
         ? (
           <Grid container justify={'center'}>
@@ -66,6 +64,9 @@ const PostsList = (props) => {
           )
           : (
             posts && posts.length > 0 && posts.map((post, index) => {
+              if(listType === 'byAdmin' && adminListCondition['visible'] !== post.visible) {
+                return null;
+              }
               let needsToShowWebPageTitle = false;
               let webpage = null;
               let existingIndex;

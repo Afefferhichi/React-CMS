@@ -52,8 +52,8 @@ const getClientInfo = async (dispatch) => {
 
 const logout = async (dispatch) => {
   try {
-    dispatch({type: LOG_OUT});
     localStorage.removeItem('token');
+    dispatch({type: LOG_OUT});
   } catch (err) {
     throw err;
   }

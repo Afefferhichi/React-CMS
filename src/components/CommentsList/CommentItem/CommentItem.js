@@ -73,7 +73,7 @@ const CommentItem = props => {
           )}
           {isAdmin && (
             <Grid item container alignItems={'center'} justify={'center'}
-                  style={{width: 50, float: 'left'}} >
+                  style={{width: 120, float: 'left'}} >
               <SetVisibleButton visibleItem={comment} itemType={'comment'}/>
             </Grid>
           )}

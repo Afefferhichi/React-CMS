@@ -6,7 +6,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/__tests__/e2e/demo/google-translate.js" beforeDir="false" afterPath="$PROJECT_DIR$/__tests__/e2e/demo/google-translate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.style.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostSync/PostSync.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostSync/PostSync.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/MainContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/MainContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/actions/UserActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/UserActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/PostReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/PostReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/UserReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/UserReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/mui/Elements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/Elements.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/mui/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/themes/mui/scss/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/scss/common.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +110,7 @@
       <workItem from="1605717975606" duration="506000" />
       <workItem from="1605760790516" duration="2131000" />
       <workItem from="1605795031880" duration="4650000" />
+      <workItem from="1606372462265" duration="12301000" />
     </task>
     <servers />
   </component>
@@ -177,10 +194,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="485" y="108" width="948" height="614" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1605800202657" />
-    <state x="232" y="54" width="1102" height="641" key="find.popup" timestamp="1605636704560">
+    <state x="232" y="54" width="1102" height="641" key="find.popup" timestamp="1606387996409">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="232" y="54" width="1102" height="641" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1605636704560" />
+    <state x="232" y="54" width="1102" height="641" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606387996409" />
     <state x="615" y="190" key="run.anything.popup" timestamp="1605280022244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

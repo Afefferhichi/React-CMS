@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import {IconButton, VisibilityIcon, VisibilityOffIcon} from "project-elements";
+import {IconButton, Button, VisibilityOffIcon} from "project-elements";
 import {MainContext} from "../../contexts/MainContext";
 
 const SetVisibleButton = props => {
@@ -7,6 +7,7 @@ const SetVisibleButton = props => {
   const [onProcessing, setOnProcessing] = useState('');
   const {visibleItem, itemType} = props;
   const visibleItemPressHandler = async () => {
+    if(!window.confirm('Are you sure?')) return;
     try{
       setOnProcessing('visible');
       const visibleMethod = visibleItem.visible ? 'invisible' : 'visible';
@@ -28,8 +29,8 @@ const SetVisibleButton = props => {
   };
   return (
     <IconButton disabled={onProcessing === 'visible'} onClick={visibleItemPressHandler}>
-      {visibleItem.visible === true && <VisibilityIcon/>}
-      {visibleItem.visible === false && <VisibilityOffIcon/>}
+      {visibleItem.visible === true && <Button variant={'outlined'} >Disapprove</Button>}
+      {visibleItem.visible !== true && <Button variant={'outlined'}>Approve</Button>}
     </IconButton>
   );
 };

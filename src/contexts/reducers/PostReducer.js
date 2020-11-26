@@ -22,7 +22,7 @@ const PostReducer = (state, {type, payload}) => {
     case ADD_POST:
       return {
         ...state,
-        posts: (state.posts || []).concat(payload)
+        posts: [].concat(payload, state.posts)
       };
     case UPDATE_POST:
       const originalPosts = [...(state.posts || [])];

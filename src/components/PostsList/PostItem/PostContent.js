@@ -1,6 +1,6 @@
 import React, {useContext} from "react";
 import {Link} from 'react-router-dom';
-import {ArrowBack, Avatar, Divider, Grid, Typography} from "project-elements";
+import {ArrowBack, Avatar, Grid, Typography} from "project-elements";
 import usePostContentStyle from './PostContent.style';
 import {MainContext} from "../../../contexts/MainContext";
 import DownloadLinkItem from "../../DownloadLinkItem";
@@ -10,6 +10,7 @@ import LikeButton from "../../PostCommentButtons/LikeButton";
 import EditButton from "../../PostCommentButtons/EditButton";
 import DeleteButton from "../../PostCommentButtons/DeleteButton";
 import SetVisibleButton from "../../PostCommentButtons/SetVisibleButton";
+import {Divider} from "../../../themes/mui/Elements";
 
 const PostContent = props => {
   const classes = usePostContentStyle();
@@ -76,7 +77,10 @@ const PostContent = props => {
                   </Typography>
                 )}
               {(
-                visible ? '' : <span style={{color: 'gray'}}>(not approved)</span>
+                visible === null && <span style={{color: 'gray'}}>(needs to approve)</span>
+              )}
+              {(
+                visible === false && <span style={{color: 'gray'}}>(not approved)</span>
               )}
             </Grid>
           </Grid>
@@ -110,7 +114,7 @@ const PostContent = props => {
             )}
             {isAdmin && (
               <Grid item container alignItems={'center'} justify={'center'}
-                    style={{width: 50, float: 'left'}}>
+                    style={{width: 130, float: 'left'}}>
                 <SetVisibleButton visibleItem={post} itemType={'post'}/>
               </Grid>
             )}
@@ -120,14 +124,18 @@ const PostContent = props => {
       <Grid item xs={12} style={{paddingLeft: 30}}>
         <div dangerouslySetInnerHTML={{__html: pstContent}}/>
       </Grid>
-      <Grid item xs={12}>
-        <Divider/>
-      </Grid>
-      <Grid item>
-        {attachments.map((attachment, index) => (
-          <DownloadLinkItem key={String(index)} attachment={attachment}/>
-        ))}
-      </Grid>
+      {attachments && attachments.length > 0 && (
+        <>
+          <Grid item xs={12}>
+            <Divider/>
+          </Grid>
+          <Grid item>
+            {attachments.map((attachment, index) => (
+              <DownloadLinkItem key={String(index)} attachment={attachment}/>
+            ))}
+          </Grid>
+        </>
+      )}
     </>
   );
 };

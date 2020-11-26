@@ -11,22 +11,23 @@ import Dialog2Actions from "./actions/Dialog2Actions";
 
 export const MainContext = createContext();
 export let dispatch2 = {};
+export const InitialState = {
+  client: null,
+  users: [],
+  posts: [],
+  post: null,
+  templates: [],
+  webpages: [],
+  webpage: null,
+  snackbar: {},
+  dialog2: null,
+};
 
 const MainContextProvider = ({children}) => {
   const clientInfo = (JSON.parse(localStorage.getItem('clientInfo')));
 
   const [{client, users, posts, post, templates, webpages, webpage, snackbar, dialog2}, dispatch] =
-    useReducer(MainReducer, {
-      client: clientInfo,
-      users: [],
-      posts: [],
-      post: null,
-      templates: [],
-      webpages: [],
-      webpage: null,
-      snackbar: {},
-      dialog2: null,
-    });
+    useReducer(MainReducer, {...InitialState, client: clientInfo});
 
   dispatch2 = dispatch;
 

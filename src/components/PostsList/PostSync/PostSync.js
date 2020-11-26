@@ -3,6 +3,7 @@ import {Button, CircularProgress} from "project-elements";
 import CallServer from "../../../utils/CallServer";
 
 const PostSync = (props) => {
+  const {style} = props;
   const [processing, setProcessing] = useState(false);
   const syncPostsHandler = async () => {
     setProcessing(true);
@@ -10,7 +11,7 @@ const PostSync = (props) => {
     setProcessing(false);
   };
   return (
-    <Button onClick={syncPostsHandler}>
+    <Button style={style} variant={'outlined'} onClick={syncPostsHandler}>
       {processing
         ? (<CircularProgress size={'1.2rem'}/>)
         : "Synchronize posts"
