@@ -11,7 +11,7 @@ const AdminHome = props => {
 
   return (
     <Container>
-      <Typography variant="h6" className={classes.title}>Welcome {firstname}. What do you want to do
+      <Typography variant="h6" className={classes.title}>Welcome Admin {firstname}. What do you want to do
         ?</Typography>
       <Grid container className={classes.grid} spacing={3} justify='center' alignItems='center'>
         <Grid item xs={12} md={3}>

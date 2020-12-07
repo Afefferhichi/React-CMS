@@ -1,0 +1,79 @@
+.designed_card{
+    background-color: #fff;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14), 0px 1px 10px 0px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    transition: all;
+    transition-duration: .3s;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.designed_card:hover{
+    transform: scale(1.02);
+}
+.designed_card h2{
+    font-weight: 200;
+    font-size: 23px;
+}
+.designed_card .top{
+    clip-path: polygon(100% 0, 100% 76%, 0 100%, 0 0);
+    background-color: #5de6de;
+    background-image: linear-gradient(315deg, #daabe0 0%, #03a6a3 74%);
+    color: #FFFFFF;
+    font-weight: 100;
+    padding: 15px;
+    padding-bottom: 23px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+/* .designed_card .top{
+    background-color: #fc5296 !important;
+    background-image: linear-gradient(315deg, #fc5296 0%, #f67062 74%) !important; 
+} */
+.designed_card .middle{
+    padding: 3px 15px;
+    padding-top: 45px;
+    margin-top: -35px;
+    text-transform: uppercase;
+    background-color:#ECECEC;
+    border-bottom: .2px solid #cecece;
+}
+.designed_card .middle p span{
+    font-weight: 600;
+    margin-right: 8px;
+}
+.designed_card .des_middle{
+    background-color: #ffffff;
+    padding: 5px 15px;
+    border-bottom: .2px solid #cecece;
+    color: hsl(0, 0%, 47%);
+    min-height: 60px;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.designed_card .bottom{
+    background-color: #F0F5F5;
+    padding: 15px;
+}
+.designed_card .bottom button{
+    border: .5px solid #ddd;
+    padding: 8px;
+    width: 130px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.designed_card .bottom button:hover{
+    background-color: #2e2e2e;
+    color: #FFFFFF !important;
+}
+button:focus{
+    outline: none;
+}

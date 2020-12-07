@@ -44,12 +44,12 @@ export default () => {
                 options={{
                   actionsColumnIndex: -1
                 }}
-                title="Manage TemplatesList"
+                title="Manage Templates List"
                 columns={[
-                  {title: 'Name', field: 'name'},
-                  {title: 'Category', field: 'category'},
-                  {title: 'Users', field: 'users'},
-                  {title: 'Enabled', field: 'enabled', type: 'boolean'}
+                  {title: 'NAME', field: 'name'},
+                  {title: 'CATEGORY', field: 'category'},
+                  {title: 'USERS', field: 'users'},
+                  {title: 'ENABLED', field: 'enabled', type: 'boolean'}
                 ]}
                 tableRef={tableRef}
                 data={tableData}

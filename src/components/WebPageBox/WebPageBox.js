@@ -13,6 +13,7 @@ import {
 } from 'project-elements';
 import {nl2br} from "../../utils/Misc";
 import {MainContext} from "../../contexts/MainContext";
+import './webpage.styles.css'
 
 const WebPageBox = props => {
   const {_id, name} = props.webpage;
@@ -39,26 +40,17 @@ const WebPageBox = props => {
   }
 
   return (
-    <Card>
-      <CardContent>
-        <Typography variant={'h6'} elevation={0} style={{padding: 0}}
-                    dangerouslySetInnerHTML={{__html: nl2br(name || '')}}
-        />
-      </CardContent>
-      <Divider style={{marginLeft: 10, marginRight: 10,}}/>
-      <CardActions>
-        <IconButton onClick={pressEditHandler}>
-          <EditIcon/>
-        </IconButton>
-        <IconButton onClick={pressDeleteHandler}>
-          <DeleteIcon/>
-        </IconButton>
-        <IconButton onClick={pressShowHandler}>
-          <VisibilityIcon/>
-        </IconButton>
-      </CardActions>
-    </Card>
-  );
+    <div className="designed_card webpage_box-card">
+      <div className="top">
+        <div className="text_box"><h2>{name || ''}</h2></div>
+      </div>
+      <div className="bottom">
+        <button onClick={pressEditHandler}><EditIcon/></button>
+        <button onClick={pressDeleteHandler}><DeleteIcon/></button>
+        <button onClick={pressShowHandler}><VisibilityIcon/></button>
+      </div>
+  </div>
+ );
 };
 
 export default WebPageBox;
