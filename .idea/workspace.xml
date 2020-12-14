@@ -7,24 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.style.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentItem/CommentItem.style.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CommentsList/CommentsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CommentsList/CommentsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostCommentButtons/SetVisibleButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostItem/PostContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostSync/PostSync.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostSync/PostSync.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PostsList/PostsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/MainContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/MainContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/actions/UserActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/UserActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/PostReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/PostReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/UserReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/UserReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/mui/Elements.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/Elements.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/mui/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/themes/mui/scss/common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/themes/mui/scss/common.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,18 +52,6 @@
       <recent name="D:\contribute\3almadmoun\front-end\src\components" />
       <recent name="D:\contribute\3almadmoun\front-end\src\contexts\reducers" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -126,7 +100,8 @@
       <workItem from="1605717975606" duration="506000" />
       <workItem from="1605760790516" duration="2131000" />
       <workItem from="1605795031880" duration="4650000" />
-      <workItem from="1606372462265" duration="12301000" />
+      <workItem from="1606372462265" duration="12653000" />
+      <workItem from="1607953350235" duration="95000" />
     </task>
     <servers />
   </component>
