@@ -39,6 +39,14 @@ const AdminHome = props => {
           </Paper>
         </Grid>
       </Grid>
+      <Grid container className={classes.grid} spacing={3} justify='left' alignItems='center'>
+        <Grid item xs={12} md={3}>
+          <Paper elevation={3} className={classes.paper}>
+            <Button variant='contained' className={classes.button}
+                    onClick={() => history.push('/admin/contact_messages')}>Contact Messages</Button>
+          </Paper>
+        </Grid>
+      </Grid>
     </Container>
   );
 };

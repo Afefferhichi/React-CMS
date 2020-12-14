@@ -56,7 +56,7 @@ const getTypeIndexFromProps = (props) => {
 
 export default (props) => {
   const history = useHistory();
-  const {client, posts} = useContext(MainContext);
+  const {client} = useContext(MainContext);
   const [value, setValue] = React.useState(getTypeIndexFromProps(props));
 
   const handleChange = (event, index) => {

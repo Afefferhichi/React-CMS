@@ -2,9 +2,9 @@ import {OPEN_CLOSE_SNACKBAR} from "../reducers/SnackbarReducer";
 import {dispatch2} from "../MainContext";
 
 const openSnackBar = async (snackbarData) => {
-  const {message, severity, duration} = snackbarData;
+  const {message, severity, duration, buttons} = snackbarData;
   try {
-    dispatch2({type: OPEN_CLOSE_SNACKBAR, payload: {opened: true, message, severity, duration}});
+    dispatch2({type: OPEN_CLOSE_SNACKBAR, payload: {opened: true, message, severity, duration, buttons}});
   } catch (err) {
     throw err;
   }

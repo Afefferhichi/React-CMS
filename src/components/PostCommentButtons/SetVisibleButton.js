@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import {IconButton, Button, VisibilityOffIcon} from "project-elements";
+import {Button, IconButton} from "project-elements";
 import {MainContext} from "../../contexts/MainContext";
 
 const SetVisibleButton = props => {
@@ -7,8 +7,8 @@ const SetVisibleButton = props => {
   const [onProcessing, setOnProcessing] = useState('');
   const {visibleItem, itemType} = props;
   const visibleItemPressHandler = async () => {
-    if(!window.confirm('Are you sure?')) return;
-    try{
+    if (!window.confirm('Are you sure?')) return;
+    try {
       setOnProcessing('visible');
       const visibleMethod = visibleItem.visible ? 'invisible' : 'visible';
       if (itemType === 'post') {
@@ -20,7 +20,7 @@ const SetVisibleButton = props => {
       setOnProcessing('');
     } catch (errorResponse) {
       setOnProcessing('');
-      if(errorResponse.error) {
+      if (errorResponse.error) {
         alert(errorResponse.error.message)
       } else {
         alert('Unexpected error occurred')
@@ -29,7 +29,7 @@ const SetVisibleButton = props => {
   };
   return (
     <IconButton disabled={onProcessing === 'visible'} onClick={visibleItemPressHandler}>
-      {visibleItem.visible === true && <Button variant={'outlined'} >Disapprove</Button>}
+      {visibleItem.visible === true && <Button variant={'outlined'}>Disapprove</Button>}
       {visibleItem.visible !== true && <Button variant={'outlined'}>Approve</Button>}
     </IconButton>
   );

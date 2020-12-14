@@ -3,6 +3,7 @@ import MainReducer from './reducers';
 
 import UserActions from './actions/UserActions';
 import PostActions from './actions/PostActions';
+import ContactMessageActions from './actions/ContactMessageActions';
 import CommentActions from './actions/CommentActions';
 import TemplateActions from './actions/TemplateActions';
 import WebPageActions from './actions/WebPageActions';
@@ -15,6 +16,7 @@ export const InitialState = {
   client: null,
   users: [],
   posts: [],
+  contact_messages: [],
   post: null,
   templates: [],
   webpages: [],
@@ -26,7 +28,7 @@ export const InitialState = {
 const MainContextProvider = ({children}) => {
   const clientInfo = (JSON.parse(localStorage.getItem('clientInfo')));
 
-  const [{client, users, posts, post, templates, webpages, webpage, snackbar, dialog2}, dispatch] =
+  const [{client, users, posts, contact_messages, post, templates, webpages, webpage, snackbar, dialog2}, dispatch] =
     useReducer(MainReducer, {...InitialState, client: clientInfo});
 
   dispatch2 = dispatch;
@@ -44,6 +46,7 @@ const MainContextProvider = ({children}) => {
         client,
         users,
         posts,
+        contact_messages,
         post,
         templates,
         webpages,
@@ -52,6 +55,7 @@ const MainContextProvider = ({children}) => {
         dialog2,
         ...UserActions,
         ...PostActions,
+        ...ContactMessageActions,
         ...CommentActions,
         ...TemplateActions,
         ...WebPageActions,

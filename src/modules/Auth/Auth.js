@@ -40,29 +40,25 @@ class Auth extends React.Component {
     return (
       <MainContext.Consumer>
         {({client}) => (
-          <>
-            {
-              !client
-                ? (
-                  <div className="App row">
-                    <div className="login col-md-5">
-                      <div className="container" ref={ref => (this.container = ref)}>
-                        {isLogginActive
-                          ? <LoginForm containerRef={ref => (this.current = ref)}/>
-                          : <RegisterForm containerRef={ref => (this.current = ref)}/>
-                        }
-                      </div>
-                      <RightSide
-                        current={current}
-                        currentActive={currentActive}
-                        containerRef={ref => (this.rightSide = ref)}
-                        onClick={this.changeState.bind(this)}
-                      />
-                    </div>
+          !client
+            ? (
+              <div className="App row">
+                <div className="login col-md-5">
+                  <div className="container" ref={ref => (this.container = ref)}>
+                    {isLogginActive
+                      ? <LoginForm containerRef={ref => (this.current = ref)}/>
+                      : <RegisterForm containerRef={ref => (this.current = ref)}/>
+                    }
                   </div>
-                ) : <Redirect to='/home'/>
-            }
-          </>
+                  <RightSide
+                    current={current}
+                    currentActive={currentActive}
+                    containerRef={ref => (this.rightSide = ref)}
+                    onClick={this.changeState.bind(this)}
+                  />
+                </div>
+              </div>
+            ) : <Redirect to='/home'/>
         )}
       </MainContext.Consumer>
     );

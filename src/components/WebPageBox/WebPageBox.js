@@ -1,17 +1,6 @@
 import React, {useContext} from "react";
 import {useHistory} from 'react-router-dom';
-import {
-  Card,
-  CardActions,
-  CardContent,
-  DeleteIcon,
-  Divider,
-  EditIcon,
-  IconButton,
-  Typography,
-  VisibilityIcon,
-} from 'project-elements';
-import {nl2br} from "../../utils/Misc";
+import {DeleteIcon, EditIcon, VisibilityIcon,} from 'project-elements';
 import {MainContext} from "../../contexts/MainContext";
 import './webpage.styles.css'
 
@@ -49,8 +38,8 @@ const WebPageBox = props => {
         <button onClick={pressDeleteHandler}><DeleteIcon/></button>
         <button onClick={pressShowHandler}><VisibilityIcon/></button>
       </div>
-  </div>
- );
+    </div>
+  );
 };
 
 export default WebPageBox;

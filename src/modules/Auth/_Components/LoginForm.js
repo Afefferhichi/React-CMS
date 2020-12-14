@@ -6,10 +6,11 @@ import {useFormik} from "formik";
 import Logo from "../../../assets/logo.png";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import {GoogleLogin} from "react-google-login";
+import ContactMessage from "./ContactMessage";
 
 
 const LoginForm = () => {
-  const {login, signUp, openSnackBar, dispatch} = useContext(MainContext);
+  const {login, signUp, openSnackBar, closeSnackBar, openDialog, dispatch} = useContext(MainContext);
   const history = useHistory();
 
   const responseFacebook = async response => {
@@ -52,7 +53,20 @@ const LoginForm = () => {
         openSnackBar({message: 'Successfully logged in!', severity: 'success'}, dispatch);
         history.push('/home');
       } catch (err) {
-        openSnackBar({message: err.message, severity: 'error'}, dispatch);
+        if (err.code === 'ACCOUNT_DISABLED') {
+          openSnackBar({
+            message: err.message, severity: 'error', duration: 60000, buttons: [
+              {
+                text: 'Send contact message to admin', onClick: () => {
+                  openDialog({title: 'Contact to Admin', contentComponent: <ContactMessage />});
+                  closeSnackBar();
+                }
+              }
+            ]
+          }, dispatch);
+        } else {
+          openSnackBar({message: err.message, severity: 'error'}, dispatch);
+        }
       }
     }
   });

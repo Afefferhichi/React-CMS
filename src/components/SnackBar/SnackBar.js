@@ -1,5 +1,5 @@
 import React, {createRef, useContext} from "react";
-import {MuiAlert, Snackbar} from "project-elements";
+import {Button, MuiAlert, Snackbar} from "project-elements";
 import {MainContext} from "../../contexts/MainContext";
 
 function Alert(props) {
@@ -10,7 +10,7 @@ const SnackBar = props => {
   const {snackbar = {}, closeSnackBar, dispatch} = useContext(MainContext);
   const snackbarRef = createRef();
 
-  const {message = '', severity = 'success', opened = false, duration = 2000} = snackbar;
+  const {message = '', severity = 'success', opened = false, duration = 2000, buttons = []} = snackbar;
 
   return (
     <Snackbar
@@ -30,6 +30,9 @@ const SnackBar = props => {
         severity={severity}
         onClose={() => closeSnackBar(dispatch)}>
         {message}
+        {buttons && buttons.map(button => (
+          <Button variant={'outlined'} size={'small'} onClick={button.onClick}>{button.text}</Button>
+        ))}
       </Alert>
     </Snackbar>
   );

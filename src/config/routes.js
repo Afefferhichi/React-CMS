@@ -18,6 +18,7 @@ import ManagePosts from "../modules/Admin/Posts/ManagePosts";
 import AdminTemplatesList from "../modules/Admin/Templates/List";
 import AdminTemplatesNew from "../modules/Admin/Templates/New";
 import AdminTemplatesEdit from "../modules/Admin/Templates/Edit";
+import AdminContactMessagesList from "../modules/Admin/ContactMessages/List";
 
 
 const routes = [
@@ -39,6 +40,7 @@ const routes = [
   {path: '/admin/templates/new', component: AdminTemplatesNew},
   {path: '/admin/templates/:id/edit', component: AdminTemplatesEdit},
   {path: '/admin/templates', component: AdminTemplatesList},
+  {path: '/admin/contact_messages', component: AdminContactMessagesList},
   {path: '/search/:query', component: Search, exact: false},
 ];
 

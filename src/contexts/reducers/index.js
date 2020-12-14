@@ -8,6 +8,13 @@ import PostReducer, {
   UPDATE_POST,
   VISIBLE_POST
 } from "./PostReducer";
+import ContactMessageReducer, {
+  ADD_CONTACT_MESSAGE,
+  DELETE_CONTACT_MESSAGE,
+  GET_CONTACT_MESSAGE,
+  LOAD_CONTACT_MESSAGE,
+  UPDATE_CONTACT_MESSAGE
+} from "./ContactMessageReducer";
 import CommentReducer, {
   ADD_COMMENT,
   DELETE_COMMENT,
@@ -50,6 +57,12 @@ export default (state, {type, payload}) => {
     case GET_POST:
     case VISIBLE_POST:
       return PostReducer(state, {type, payload});
+    case ADD_CONTACT_MESSAGE:
+    case DELETE_CONTACT_MESSAGE:
+    case GET_CONTACT_MESSAGE:
+    case LOAD_CONTACT_MESSAGE:
+    case UPDATE_CONTACT_MESSAGE:
+      return ContactMessageReducer(state, {type, payload});
     case FLAG_COMMENT:
     case ENABLE_COMMENT:
     case DISABLE_COMMENT:
