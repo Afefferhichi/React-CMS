@@ -76,7 +76,7 @@ export default (props) => {
       {client && client.role === 'admin' && <PostSync style={{float: 'right', marginRight: 5,}}/>}
       <Tabs value={value} onChange={handleChange}>
         <Tab label="New Posts" {...a11yProps(0)} />
-        {/*<Tab label="Approved" {...a11yProps(1)} />*/}
+        <Tab label="Approved" hidden {...a11yProps(1)} />
         <Tab label="Not Approved" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>

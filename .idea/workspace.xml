@@ -5,11 +5,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="">
+    <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="We need to remove the approved section">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/Posts/ManagePosts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,8 +101,16 @@
       <workItem from="1605760790516" duration="2131000" />
       <workItem from="1605795031880" duration="4650000" />
       <workItem from="1606372462265" duration="12653000" />
-      <workItem from="1607953350235" duration="95000" />
+      <workItem from="1607953350235" duration="1127000" />
     </task>
+    <task id="LOCAL-00001" summary="We need to remove the approved section">
+      <created>1607969209068</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607969209068</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +167,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="We need to remove the approved section" />
+    <option name="LAST_COMMIT_MESSAGE" value="We need to remove the approved section" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603137323637">
