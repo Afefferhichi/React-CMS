@@ -20,27 +20,39 @@ import CommentReducer, {
   DELETE_COMMENT,
   DISABLE_COMMENT,
   ENABLE_COMMENT,
-  FLAG_COMMENT, HELPFUL_COMMENTS, UPDATE_COMMENT, VISIBLE_COMMENT,
+  FLAG_COMMENT,
+  HELPFUL_COMMENTS,
+  UPDATE_COMMENT,
+  VISIBLE_COMMENT,
 } from "./CommentReducer";
 import TemplateReducer, {
   ADD_TEMPLATE,
   DELETE_TEMPLATE,
   DISABLE_TEMPLATE,
-  ENABLE_TEMPLATE, LOAD_TEMPLATE_CATEGORIES, LOAD_TEMPLATES, SELECT_TEMPLATE_CATEGORIES,
+  ENABLE_TEMPLATE,
+  LOAD_TEMPLATES,
+  SELECT_TEMPLATE_CATEGORIES,
   UPDATE_TEMPLATE
 } from './TemplateReducer';
 import WebPageReducer, {
   ADD_WEBPAGE,
   DELETE_WEBPAGE,
   DISABLE_WEBPAGE,
-  ENABLE_WEBPAGE, FOLLOW_WEBPAGE, LOAD_WEBPAGE, LOAD_WEBPAGES, UNFOLLOW_WEBPAGE,
+  ENABLE_WEBPAGE,
+  FOLLOW_WEBPAGE,
+  LOAD_WEBPAGE,
+  LOAD_WEBPAGES,
+  UNFOLLOW_WEBPAGE,
   UPDATE_WEBPAGE
 } from './WebPageReducer';
 import SnackbarReducer, {OPEN_CLOSE_SNACKBAR} from "./SnackbarReducer";
 import Dialog2Reducer, {OPEN_CLOSE_DIALOG2} from "./Dialog2Reducer";
+import {FORCE_UPDATE_CONTEXT} from "../MainContext";
 
 export default (state, {type, payload}) => {
   switch (type) {
+    case FORCE_UPDATE_CONTEXT:
+      return {...state, loadTime: payload};
     case SIGN_UP:
     case LOG_IN:
     case LOG_OUT:

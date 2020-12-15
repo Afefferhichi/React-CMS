@@ -57,6 +57,20 @@ const updateContactMessage = async (id, contact_messageData) => {
   }
 };
 
+const markContactMessageAsSeen = async (id, seenMethod) => {
+  try {
+    const request = await CallServer.put('contact_messages/' + id + '/' + seenMethod);
+    if (request.success) {
+      const {updatedContactMessage} = request;
+      await dispatch2({type: UPDATE_CONTACT_MESSAGE, payload: {_id: id, updatedContactMessage}});
+    } else {
+      throw request;
+    }
+  } catch (err) {
+    throw err;
+  }
+};
+
 const deleteContactMessage = async (id) => {
   try {
     const request = await CallServer.delete('contact_messages/' + id);
@@ -90,5 +104,6 @@ export default {
   deleteContactMessage,
   addContactMessage,
   updateContactMessage,
+  markContactMessageAsSeen,
   getContactMessage,
 };

@@ -13,6 +13,7 @@ import Dialog2Actions from "./actions/Dialog2Actions";
 export const MainContext = createContext();
 export let dispatch2 = {};
 export const InitialState = {
+  loadTime: null,
   client: null,
   users: [],
   posts: [],
@@ -25,13 +26,14 @@ export const InitialState = {
   snackbar: {},
   dialog2: null,
 };
+export const FORCE_UPDATE_CONTEXT = 'FORCE_UPDATE_CONTEXT';
 
 const MainContextProvider = ({children}) => {
   const clientInfo = (JSON.parse(localStorage.getItem('clientInfo')));
   const selected_template_categories_info = (JSON.parse(localStorage.getItem('selected_template_categories')));
 
   const [{
-    client, users, posts, contact_messages, post, templates, selected_template_categories,
+    loadTime, client, users, posts, contact_messages, post, templates, selected_template_categories,
     webpages, webpage, snackbar, dialog2
   }, dispatch] =
     useReducer(MainReducer, {
@@ -50,11 +52,17 @@ const MainContextProvider = ({children}) => {
   }, [selected_template_categories]);
 
   const domRef = createRef();
+
+  const forceUpdateContext = () => {
+    dispatch({type: FORCE_UPDATE_CONTEXT, payload: +new Date() })
+  }
+
   return (
     <MainContext.Provider
       ref={domRef}
       value={{
         dispatch,
+        loadTime,
         client,
         users,
         posts,
@@ -66,6 +74,7 @@ const MainContextProvider = ({children}) => {
         webpage,
         snackbar,
         dialog2,
+        forceUpdateContext,
         ...UserActions,
         ...PostActions,
         ...ContactMessageActions,

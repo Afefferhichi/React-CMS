@@ -6,7 +6,10 @@ import useContactMessagesListStyle from './AdminContactMessagesList.style';
 
 export default () => {
   const classes = useContactMessagesListStyle();
-  const {client, contact_messages, loadContactMessages, deleteContactMessage, getContactMessage, dispatch} = useContext(MainContext);
+  const {
+    client, contact_messages, loadContactMessages, deleteContactMessage,
+    forceUpdateContext, markContactMessageAsSeen, dispatch
+  } = useContext(MainContext);
   const tableRef = useRef();
 
   const deleteContactMessageHandler = (event, message) => {
@@ -14,9 +17,12 @@ export default () => {
     deleteContactMessage(message._id, dispatch);
   }
 
-  const showContactMessageHandler = async (event, contact_message) => {
-    const got_message = await getContactMessage(contact_message._id);
-    console.log('got_message', got_message);
+  const markAsSeenPressHandler = async (event, contact_message) => {
+    await markContactMessageAsSeen(
+      contact_message._id,
+      !contact_message.seen ? 'markAsSeen' : 'markAsUnSeen'
+    )
+    await forceUpdateContext();
   }
 
   const componentDidMount = () => {
@@ -40,19 +46,18 @@ export default () => {
                 }}
                 title="Contact Messages List"
                 columns={[
-                  {title: 'Title', field: 'title', align: 'left'},
-                  {title: 'Email', field: 'email'},
-                  {title: 'Content', field: 'content', align: 'left'},
+                  {title: 'Title', field: 'title', align: 'left', width: 200,},
+                  {title: 'Email', field: 'email', width: 150,},
+                  {title: 'Content', field: 'content', align: 'left', width: 800},
                 ]}
                 tableRef={tableRef}
                 data={tableData}
                 actions={[
-                  {
-                    tooltip: 'Show contact message',
-                    icon: 'visibility',
-                    isFreeAction: true,
-                    onClick: showContactMessageHandler
-                  },
+                  rowData => ({
+                    tooltip: !rowData.seen ? 'Mark as read' : 'Mark as unread',
+                    icon: !rowData.seen ? 'mail_outline' : 'drafts_outline',
+                    onClick: markAsSeenPressHandler
+                  }),
                   {
                     tooltip: 'Delete',
                     icon: 'delete',
