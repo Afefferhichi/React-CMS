@@ -5,8 +5,6 @@ import './template.styles.css'
 
 const TemplateBox = props => {
   const {_id, name, category, description} = props.template
-  console.log(category
-  )
   const history = useHistory();
 
   const pressPreviewHandler = () => {

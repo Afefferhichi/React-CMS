@@ -26,7 +26,7 @@ import TemplateReducer, {
   ADD_TEMPLATE,
   DELETE_TEMPLATE,
   DISABLE_TEMPLATE,
-  ENABLE_TEMPLATE, LOAD_TEMPLATES,
+  ENABLE_TEMPLATE, LOAD_TEMPLATE_CATEGORIES, LOAD_TEMPLATES, SELECT_TEMPLATE_CATEGORIES,
   UPDATE_TEMPLATE
 } from './TemplateReducer';
 import WebPageReducer, {
@@ -74,6 +74,7 @@ export default (state, {type, payload}) => {
       return CommentReducer(state, {type, payload});
     case ADD_TEMPLATE:
     case LOAD_TEMPLATES:
+    case SELECT_TEMPLATE_CATEGORIES:
     case ENABLE_TEMPLATE:
     case DISABLE_TEMPLATE:
     case UPDATE_TEMPLATE:

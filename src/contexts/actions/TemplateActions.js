@@ -3,16 +3,36 @@ import {
   DELETE_TEMPLATE,
   DISABLE_TEMPLATE,
   ENABLE_TEMPLATE,
-  LOAD_TEMPLATES,
+  LOAD_TEMPLATES, SELECT_TEMPLATE_CATEGORIES,
   UPDATE_TEMPLATE
 } from "../reducers/TemplateReducer";
 import CallServer from "../../utils/CallServer";
+import {dispatch2} from "../MainContext";
 
-const loadTemplates = async (dispatch) => {
+const loadTemplates = async ({categories}) => {
   try {
-    const request = await CallServer.get('templates');
+    const categories_query = ((categories && categories.map(category => category.text)) || []).join(',')
+    const request = await CallServer.get('templates?categories='+encodeURI(categories_query));
     const {templates} = request;
-    await dispatch({type: LOAD_TEMPLATES, payload: templates});
+    await dispatch2({type: LOAD_TEMPLATES, payload: templates});
+  } catch (err) {
+    throw err;
+  }
+}
+
+const loadTemplateCategories = async () => {
+  try {
+    const request = await CallServer.get('templates/categories');
+    const {template_categories} = request;
+    return template_categories;
+  } catch (err) {
+    throw err;
+  }
+}
+
+const selectTemplateCategories = async (selected_template_categories) => {
+  try {
+    await dispatch2({type: SELECT_TEMPLATE_CATEGORIES, payload: selected_template_categories});
   } catch (err) {
     throw err;
   }
@@ -61,6 +81,8 @@ const deleteTemplate = async (id, dispatch) => {
 
 export default {
   loadTemplates,
+  loadTemplateCategories,
+  selectTemplateCategories,
   addTemplate,
   setEnabledTemplate,
   updateTemplate,

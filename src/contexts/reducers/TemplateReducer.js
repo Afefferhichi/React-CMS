@@ -1,4 +1,5 @@
 export const LOAD_TEMPLATES = 'LOAD_TEMPLATES';
+export const SELECT_TEMPLATE_CATEGORIES = 'SELECT_TEMPLATE_CATEGORIES';
 export const ADD_TEMPLATE = 'ADD_TEMPLATE';
 export const ENABLE_TEMPLATE = 'ENABLE_TEMPLATE';
 export const DISABLE_TEMPLATE = 'DISABLE_TEMPLATE';
@@ -11,6 +12,11 @@ const TemplateReducer = (state, {type, payload}) => {
       return {
         ...state,
         templates: payload
+      }
+    case SELECT_TEMPLATE_CATEGORIES:
+      return {
+        ...state,
+        selected_template_categories: payload
       }
     case ADD_TEMPLATE:
       return {

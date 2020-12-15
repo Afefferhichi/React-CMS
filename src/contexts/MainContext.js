@@ -19,6 +19,7 @@ export const InitialState = {
   contact_messages: [],
   post: null,
   templates: [],
+  selected_template_categories: [],
   webpages: [],
   webpage: null,
   snackbar: {},
@@ -27,15 +28,26 @@ export const InitialState = {
 
 const MainContextProvider = ({children}) => {
   const clientInfo = (JSON.parse(localStorage.getItem('clientInfo')));
+  const selected_template_categories_info = (JSON.parse(localStorage.getItem('selected_template_categories')));
 
-  const [{client, users, posts, contact_messages, post, templates, webpages, webpage, snackbar, dialog2}, dispatch] =
-    useReducer(MainReducer, {...InitialState, client: clientInfo});
+  const [{
+    client, users, posts, contact_messages, post, templates, selected_template_categories,
+    webpages, webpage, snackbar, dialog2
+  }, dispatch] =
+    useReducer(MainReducer, {
+      ...InitialState,
+      client: clientInfo,
+      selected_template_categories: selected_template_categories_info
+    });
 
   dispatch2 = dispatch;
 
   useEffect(() => {
     localStorage.setItem('clientInfo', (JSON.stringify(client)))
   }, [client]);
+  useEffect(() => {
+    localStorage.setItem('selected_template_categories', (JSON.stringify(selected_template_categories)))
+  }, [selected_template_categories]);
 
   const domRef = createRef();
   return (
@@ -49,6 +61,7 @@ const MainContextProvider = ({children}) => {
         contact_messages,
         post,
         templates,
+        selected_template_categories,
         webpages,
         webpage,
         snackbar,
