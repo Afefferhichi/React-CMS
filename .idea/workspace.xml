@@ -5,17 +5,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="In the case of new users, the home page is empty, it's a little bit weird">
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/contact_messages/markAsSeen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/contact_messages/markAsUnSeen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/api_calls/contact_messages/unseen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/MainContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/MainContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/actions/ContactMessageActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/actions/ContactMessageActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/contexts/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/contexts/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/Admin/ContactMessages/List/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/Admin/ContactMessages/List/List.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/navigator/NavBar/NotificationBar/NotificationBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigator/NavBar/NotificationBar/NotificationBar.js" afterDir="false" />
-    </list>
+    <list default="true" id="57188931-608a-442d-a479-4f9e1af7906b" name="Default Changelist" comment="In the case of new users, the home page is empty, it's a little bit weird" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -106,7 +96,7 @@
       <workItem from="1605760790516" duration="2131000" />
       <workItem from="1605795031880" duration="4650000" />
       <workItem from="1606372462265" duration="12653000" />
-      <workItem from="1607953350235" duration="29193000" />
+      <workItem from="1607953350235" duration="29865000" />
     </task>
     <task id="LOCAL-00001" summary="We need to remove the approved section">
       <created>1607969209068</created>
@@ -143,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607996516469</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="In the case of new users, the home page is empty, it's a little bit weird">
+      <created>1608002427588</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608002427588</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
