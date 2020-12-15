@@ -63,28 +63,40 @@ const PostsList = (props) => {
             </Grid>
           )
           : (
-            posts && posts.length > 0 && posts.map((post, index) => {
-              if(listType === 'byAdmin' && adminListCondition['visible'] !== post.visible) {
-                return null;
-              }
-              let needsToShowWebPageTitle = false;
-              let webpage = null;
-              let existingIndex;
-              if (listType === 'inHome' && webpage_ids.indexOf(post.webpage) === -1) {
-                webpage_ids.push(post.webpage);
-                needsToShowWebPageTitle = true;
-                existingIndex = webpages.findIndex(webpage => webpage._id === post.webpage)
-                if (existingIndex > -1) {
-                  webpage = webpages[existingIndex];
+            posts && posts.length > 0 ?
+              posts.map((post, index) => {
+                if (listType === 'byAdmin' && adminListCondition['visible'] !== post.visible) {
+                  return null;
                 }
-              }
-              return (
-                <div key={String(index)}>
-                  {needsToShowWebPageTitle && webpage && <WebPageTitle name={webpage.name}/>}
-                  <PostItem post={post}/>
+                let needsToShowWebPageTitle = false;
+                let webpage = null;
+                let existingIndex;
+                if (listType === 'inHome' && webpage_ids.indexOf(post.webpage) === -1) {
+                  webpage_ids.push(post.webpage);
+                  needsToShowWebPageTitle = true;
+                  existingIndex = webpages.findIndex(webpage => webpage._id === post.webpage)
+                  if (existingIndex > -1) {
+                    webpage = webpages[existingIndex];
+                  }
+                }
+                return (
+                  <div key={String(index)}>
+                    {needsToShowWebPageTitle && webpage && (
+                      <WebPageTitle id={webpage._id} name={webpage.name}/>
+                    )}
+                    <PostItem post={post}/>
+                  </div>
+                );
+              })
+              : (
+                <div style={{textAlign: 'center'}}>
+                  <Typography style={{marginTop: 100}} variant={'h6'}>
+                    There is no data to display.
+                    <br/> You can start following other user's web page.
+                    <br/> In order to do that, please try to search at the top bar.
+                  </Typography>
                 </div>
-              );
-            })
+              )
           )
       }
     </>
