@@ -4,7 +4,7 @@ dotenv.config();
 const BASIC_USER_DATA = {
   firstname: '',
   lastname: 'Last',
-  email: 'jinnahrae@gmail.com',
+  email: 'afef.ferchichi@gmail.com',
   telephone: '13241234',
   address: 'asdfasdf',
   password: '',

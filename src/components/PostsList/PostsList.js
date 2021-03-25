@@ -8,7 +8,7 @@ const PostsList = (props) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [refresh, setRefresh] = useState(0);
-  const {posts, webpages, loadPostsByCondition, loadPostsInHome} = useContext(MainContext);
+  const {client, posts, webpages, loadPostsByCondition, loadPostsInHome} = useContext(MainContext);
   const {listType, webpage_id, adminListCondition} = props;
 
   const loadData = (loaderFn) => {
@@ -88,7 +88,7 @@ const PostsList = (props) => {
                   </div>
                 );
               })
-              : (
+              : client.role !=='admin' && (
                 <div style={{textAlign: 'center'}}>
                   <Typography style={{marginTop: 100}} variant={'h6'}>
                     There is no data to display.

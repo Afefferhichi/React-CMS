@@ -1,11 +1,11 @@
 let TEST_TOKEN;
-// jinnahrae2@gmail.com
+
 // TEST_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjg3ZTQ5YzUxNTUzYzI5OGM4NjE5NDkiLCJwYXNzd29yZCI6ImFkbWluMTIzIiwiaWF0IjoxNjAzMDU1MDY3fQ.ObGKYeH_htt6biWRLPMaApVxUeD_5u_Fhch9Bq4lV-A';
 
-// jinnahrae@gmail.com
+
 // TEST_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1Zjg4YTY1YzYzMWNhNzNiZGM0NTUxYWYiLCJwYXNzd29yZCI6ImZvZmpyajEyMyIsImlhdCI6MTYwMzEzNzI2NX0.CsttcewAP_60TSxC5yIOzfPcOGrifF-EQeWZGSH-u6c';
 
-// jinnahrae2@gmail.com
+
 TEST_TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZjhkZWU5NzMxYzI4NjMwZTQ4ZjdkZTIiLCJwYXNzd29yZCI6ImZvZmpyajEyMyIsImlhdCI6MTYwMzEzNzQ4Mn0.9ETgA0P-30vhy0Khqp86zzQSa_IYR_3QluNy5qSPHx4';
 
 // admin

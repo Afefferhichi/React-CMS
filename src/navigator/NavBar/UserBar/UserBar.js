@@ -30,6 +30,7 @@ const UserBar = props => {
 
   return (
     <>
+      {client.firstname + ' ' + client.lastname}
       <Button onClick={openUserMenu}>
         <Avatar>
           {client.photo === null
